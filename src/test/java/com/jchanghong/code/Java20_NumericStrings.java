@@ -11,7 +11,21 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java20_NumericStrings {
-    public static void main(String[] args) {
+    public boolean isNumber(String string) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Assert.assertTrue(isNumber("+100"));
+        Assert.assertTrue(isNumber("5e2"));
+        Assert.assertTrue(isNumber("3.1233"));
+        Assert.assertFalse(isNumber("12e"));
+        Assert.assertFalse(isNumber("1la3.13"));
+        Assert.assertFalse(isNumber("1.2.3"));
     }
 }

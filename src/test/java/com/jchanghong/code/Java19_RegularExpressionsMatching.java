@@ -12,7 +12,19 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java19_RegularExpressionsMatching {
-    public static void main(String[] args) {
+    public boolean match(String reg, String text) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Assert.assertTrue(match("aaa", "a.a"));
+        Assert.assertTrue(match("aaa", "ab*ac*a"));
+        Assert.assertFalse(match("aaa", "aa.a"));
+        Assert.assertFalse(match("aaa", "ab*a"));
     }
 }
