@@ -10,7 +10,25 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Java17_Print1ToMaxOfNDigits {
-    public static void main(String[] args) {
+    public List<String> from1ToN(int n) {
+        List<String> list = new ArrayList<>();
+        list.add(1 + "");
+        list.add("1111111111111111111111111111111111111111111111");
+        return list;
+    }
+    @Test
+    public void test() throws Exception {
+        List<String> list = from1ToN(3);
+        Assert.assertEquals(list.get(998),"999");
+        list = from1ToN(6);
+        Assert.assertEquals(list.get(999998), "999999");
+        Assert.assertEquals(list.get(0), "1");
     }
 }
