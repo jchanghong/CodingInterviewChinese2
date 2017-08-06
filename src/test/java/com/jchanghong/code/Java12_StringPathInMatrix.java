@@ -17,7 +17,22 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java12_StringPathInMatrix {
-    public static void main(String[] args) {
+
+    public boolean havePath(char[][] chars, String string) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        char[][] chars = {{'a', 'b', 't', 'g'},
+                {'c', 'f', 'c', 's'},
+                {'j', 'd', 'e', 'h'}
+        };
+        Assert.assertEquals(havePath(chars, "bfce"), true);
+        Assert.assertEquals(havePath(chars, "abfb"), false);
     }
 }
