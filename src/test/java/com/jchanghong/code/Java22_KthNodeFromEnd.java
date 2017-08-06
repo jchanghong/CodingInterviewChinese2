@@ -12,7 +12,22 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.LinkNode;
+import com.jchanghong.code.util.LinkUtil;
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java22_KthNodeFromEnd {
-    public static void main(String[] args) {
+    public LinkNode kthNode(LinkNode head, int k) {
+
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        LinkNode head = LinkUtil.construct(1, 2, 3, 4);
+        Assert.assertNull(kthNode(null,1));
+        Assert.assertNull(kthNode(head, 5));
+        Assert.assertEquals(kthNode(head, 3).values.intValue(), 2);
     }
 }
