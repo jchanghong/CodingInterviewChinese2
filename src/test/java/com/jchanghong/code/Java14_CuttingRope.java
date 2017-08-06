@@ -12,7 +12,20 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java14_CuttingRope {
-    public static void main(String[] args) {
+    //-1表示参数错误
+    public int max(int n) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Assert.assertEquals(max(0), -1);
+        Assert.assertEquals(max(-1), -1);
+        Assert.assertEquals(max(8), 18);
+
     }
 }
