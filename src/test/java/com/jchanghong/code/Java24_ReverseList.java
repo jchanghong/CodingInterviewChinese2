@@ -10,7 +10,20 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.LinkNode;
+import com.jchanghong.code.util.LinkUtil;
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java24_ReverseList {
-    public static void main(String[] args) {
+    public LinkNode reverseList(LinkNode head) {
+        LinkNode result = head;
+        return result;
+    }
+    @Test
+    public void test() throws Exception {
+        LinkNode head = LinkUtil.construct(1, 2, 3, 4, 5, 6);
+        LinkNode h2 = LinkUtil.construct(6, 5, 4, 3, 2, 1);
+        Assert.assertTrue(LinkUtil.equels(reverseList(head), h2));
     }
 }

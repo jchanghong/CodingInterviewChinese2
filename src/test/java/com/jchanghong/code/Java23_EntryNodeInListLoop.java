@@ -10,7 +10,23 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.LinkNode;
+import com.jchanghong.code.util.LinkUtil;
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java23_EntryNodeInListLoop {
-    public static void main(String[] args) {
+    public LinkNode entrynode(LinkNode head) {
+        return null;
+    }
+    @Test
+    public void test() throws Exception {
+        LinkNode head = LinkUtil.construct(1, 2, 3, 4);
+        LinkNode node = null;
+        while (head.next != null) {
+            node = head.next;
+        }
+        node.next = head.next;
+        Assert.assertEquals(head, head.next);
     }
 }
