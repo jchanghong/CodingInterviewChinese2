@@ -11,7 +11,20 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java11_MinNumberInRotatedArray {
-    public static void main(String[] args) {
+    public int min(int[] ints) {
+        return Integer.MIN_VALUE;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = new int[]{3, 4, 5, 1, 2};
+        Assert.assertEquals(min(ints), 1);
+        ints = new int[]{
+                3, 4, 5, 0, 1, 2};
+        Assert.assertEquals(min(ints), 0);
     }
 }
