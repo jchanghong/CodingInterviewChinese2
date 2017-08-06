@@ -10,7 +10,21 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java15_NumberOf1InBinary {
-    public static void main(String[] args) {
+    public int number(int n) {
+        return -1;
+    }
+
+    @Test
+    public void test() throws Exception {
+        //9-1001
+        //8-1000
+        //7-111
+        Assert.assertEquals(number(9), 2);
+        Assert.assertEquals(number(8), 1);
+        Assert.assertEquals(number(7), 3);
     }
 }
