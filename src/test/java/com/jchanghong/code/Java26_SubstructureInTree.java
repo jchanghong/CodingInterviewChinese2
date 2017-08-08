@@ -9,7 +9,21 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.TreeNode;
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java26_SubstructureInTree {
-    public static void main(String[] args) {
+    public boolean issubTree(TreeNode head1, TreeNode head2) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode head = new TreeNode(2, null, null);
+        head.left = new TreeNode(1, null, null);
+        head.right = new TreeNode(3, null, null);
+        Assert.assertTrue(issubTree(head, head.left));
+        Assert.assertTrue(issubTree(head, head.right));
     }
 }
