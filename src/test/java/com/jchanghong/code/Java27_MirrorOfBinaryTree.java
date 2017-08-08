@@ -9,7 +9,16 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.TreeNode;
+import org.junit.Test;
+
 public class Java27_MirrorOfBinaryTree {
-    public static void main(String[] args) {
+    public TreeNode mirror(TreeNode head) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+
     }
 }
