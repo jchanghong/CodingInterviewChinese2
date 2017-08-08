@@ -10,7 +10,24 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.Arrays;
+
 public class Java28_SymmetricalBinaryTree {
-    public static void main(String[] args) {
+    public boolean isSym(TreeNode head) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode head = TreeUtil.construct(Arrays.asList(1, 2, 2));
+        TreeNode h1 = TreeUtil.construct(Arrays.asList(1, 3, 2));
+        Assert.assertTrue(isSym(head));
+        Assert.assertFalse(isSym(h1));
+
     }
 }
