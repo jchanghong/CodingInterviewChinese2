@@ -10,6 +10,7 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.Const;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,6 +23,7 @@ public class Java64_Accumulate {
     public void test() throws Exception {
         System.out.println(sumtest(10));
         System.out.println(sumtest(100));
+        Const.integerList.forEach(a-> Assert.assertEquals(sumtest(a),sum(a)));
     }
 
     public int sumtest(int n) {
