@@ -68,6 +68,7 @@ public class LinkListUtil {
     public void testequel() throws Exception {
         LinkNode head1 = construct(1, 2, 3, 4);
         LinkNode hea2 = construct(1, 2, 3, 4);
+        printlinked(head1);
         Assert.assertEquals(equels(head1, hea2), true);
         Assert.assertEquals(equels(null, hea2), false);
         hea2 = construct(1, 3, 4);
