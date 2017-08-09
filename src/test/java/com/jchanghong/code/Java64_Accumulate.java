@@ -10,7 +10,21 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java64_Accumulate {
-    public static void main(String[] args) {
+    public int sum(int n) {
+        return -1;
+    }
+
+    @Test
+    public void test() throws Exception {
+        System.out.println(sumtest(10));
+        System.out.println(sumtest(100));
+    }
+
+    public int sumtest(int n) {
+        return (1 + n) * n / 2;
     }
 }
