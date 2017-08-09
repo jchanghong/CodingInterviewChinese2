@@ -10,7 +10,25 @@
  */
 package com.jchanghong.code;
 
-public class Java32_02_PrintTreesInLines {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.List;
+
+public class Java32_02_PrintTreesInLines  extends UtilAssert{
+    //一个元素代表一行，元素之间不加任何符号。
+    List<String> print(TreeNode head) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode head = TreeUtil.construct2(1, 2, 3);
+        List<String> list = print(head);
+        eq(list.size(), 2);
+        eq(list.get(0), "1");
+        eq(list.get(1), "23");
     }
 }
