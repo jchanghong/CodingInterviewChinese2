@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class Java01_AssignmentOperator {
     @Test
-    public void main() throws Exception {
+    public void test() throws Exception {
         System.out.println("java不支持运算符重载");
     }
 
