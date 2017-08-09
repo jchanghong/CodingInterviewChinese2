@@ -12,7 +12,17 @@
  */
 package com.jchanghong.code;
 
-public class Java46_TranslateNumbersToStrings {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java46_TranslateNumbersToStrings extends UtilAssert{
+    int number(int number) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        eq(number(12258), 5);
+        eq(number(0), 1);
     }
 }
