@@ -9,7 +9,28 @@
  */
 package com.jchanghong.code;
 
-public class Java37_SerializeBinaryTrees {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.Arrays;
+
+public class Java37_SerializeBinaryTrees extends UtilAssert {
+
+    String serialize(TreeNode head) {
+        return "";
+    }
+
+    TreeNode deSerize(String string) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode head = TreeUtil.construct(Arrays.asList(1, 2, 3, 4, 5, 6));
+        String s = serialize(head);
+        TreeNode h2 = deSerize(s);
+        isTrue(TreeUtil.valuesEqual(head, h2));
     }
 }
