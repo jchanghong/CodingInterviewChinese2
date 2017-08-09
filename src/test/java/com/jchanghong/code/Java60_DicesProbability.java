@@ -10,7 +10,24 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.Map;
+
 public class Java60_DicesProbability {
-    public static void main(String[] args) {
+    // key is sum, v is pribity
+    public Map<Integer, Double> pribility(int n) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Map<Integer, Double> map = pribility(1);
+        Assert.assertTrue(map.containsKey(6));
+        Assert.assertTrue(map.get(6)==1.0 / 6);
+        map = pribility(2);
+        Assert.assertTrue(map.containsKey(2));
+        Assert.assertTrue(map.get(2) == 1.0 / 36);
     }
 }
