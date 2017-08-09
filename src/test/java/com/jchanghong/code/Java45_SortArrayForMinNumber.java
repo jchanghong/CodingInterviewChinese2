@@ -11,7 +11,17 @@
  */
 package com.jchanghong.code;
 
-public class Java45_SortArrayForMinNumber {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java45_SortArrayForMinNumber extends UtilAssert {
+
+    String min(int[] ints) {
+        return "";
+    }
+    @Test
+    public void test() throws Exception {
+        int[] ints = {3, 32, 321};
+        eq(min(ints), "321323");
     }
 }
