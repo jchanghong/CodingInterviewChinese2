@@ -11,7 +11,19 @@
  */
 package com.jchanghong.code;
 
-public class Java39_MoreThanHalfNumber {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java39_MoreThanHalfNumber extends UtilAssert {
+    //-1表示错误
+    int half(int[] ints) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        eq(half(new int[]{1, 2, 3, 4}), -1);
+        int[] ints = {1, 2, 3, 2, 2, 2, 5, 4, 2};
+        eq(half(ints), 2);
     }
 }
