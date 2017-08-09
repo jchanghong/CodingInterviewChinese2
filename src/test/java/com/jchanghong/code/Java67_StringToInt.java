@@ -10,7 +10,19 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java67_StringToInt {
-    public static void main(String[] args) {
+    public int str2Int(String string) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Assert.assertEquals(str2Int("2"), 2);
+        Assert.assertEquals(str2Int("22"), 2);
+        Assert.assertEquals(str2Int("-22"), -2);
+        Assert.assertEquals(str2Int("44422"), 44422);
     }
 }
