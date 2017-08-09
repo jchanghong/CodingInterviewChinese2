@@ -9,7 +9,21 @@
  */
 package com.jchanghong.code;
 
-public class Java32_01_PrintTreeFromTopToBottom {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java32_01_PrintTreeFromTopToBottom extends UtilAssert{
+    //元素之间没有任何其他符号。比如1,2 打印就是“12”
+    String print(TreeNode node) {
+        return "";
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode node = TreeUtil.construct2(1, 2, 3, 4, 5, 6, 7, 8);
+        eq(print(node),"12345678");
+
     }
 }
