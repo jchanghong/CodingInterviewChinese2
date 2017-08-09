@@ -11,7 +11,54 @@
  */
 package com.jchanghong.code;
 
-public class Java57_02_ContinuousSquenceWithSum {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Java57_02_ContinuousSquenceWithSum extends UtilAssert{
+    public Set<Pair> function(int sum) {
+        Set<Pair> pairs = new HashSet<>();
+        return pairs;
+    }
+    static class Pair {
+        public int start = 0;
+        public int end = 0;
+
+        public Pair(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
+        @Override
+        public String toString() {
+          return start + "->" + end;
+        }
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+           else if (obj instanceof Pair) {
+                Pair o = (Pair) obj;
+                return o.start == start && o.end == end;
+            }
+            else
+            return false;
+        }
+
+        @Override
+        public int hashCode() {
+            return toString().hashCode();
+        }
+    }
+
+    @Test
+    public void test() throws Exception {
+        Set<Pair> pairs = function(15);
+        eq(pairs.size(), 3);
+        isTrue(pairs.contains(new Pair(1, 5)));
+        isTrue(pairs.contains(new Pair(4, 6)));
+        isTrue(pairs.contains(new Pair(7, 8)));
     }
 }
