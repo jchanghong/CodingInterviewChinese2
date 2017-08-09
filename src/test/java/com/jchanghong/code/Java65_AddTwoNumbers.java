@@ -10,7 +10,17 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java65_AddTwoNumbers {
-    public static void main(String[] args) {
+    public int sum(int int1, int int2) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Assert.assertEquals(sum(1, 2), 3);
+        Assert.assertEquals(sum(1, 222), 223);
     }
 }
