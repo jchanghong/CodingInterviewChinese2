@@ -10,7 +10,20 @@
  */
 package com.jchanghong.code;
 
-public class Java33_SquenceOfBST {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java33_SquenceOfBST extends UtilAssert{
+    boolean aftersort(int[] ints) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {5, 7, 6, 9, 11, 10, 8};
+        isTrue(aftersort(ints));
+        ints = new int[]{7, 4, 6, 5};
+        isFalse(aftersort(ints));
+
     }
 }
