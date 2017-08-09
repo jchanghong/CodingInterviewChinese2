@@ -10,7 +10,17 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java62_LastNumberInCircle {
-    public static void main(String[] args) {
+    public int lastNumber(int[] ints) {
+        return -1;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {0, 1, 2, 3, 4};
+        Assert.assertEquals(lastNumber(ints), 3);
     }
 }
