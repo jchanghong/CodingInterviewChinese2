@@ -22,11 +22,11 @@ public class Java23_EntryNodeInListLoop {
     @Test
     public void test() throws Exception {
         LinkNode head = LinkListUtil.construct(1, 2, 3, 4);
-        LinkNode node = null;
-        while (head.next != null) {
-            node = head.next;
+        LinkNode node = head;
+        while (node.next != null) {
+            node = node.next;
         }
         node.next = head.next;
-        Assert.assertEquals(head, head.next);
+        Assert.assertEquals(entrynode(head), head.next);
     }
 }
