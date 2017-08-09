@@ -17,7 +17,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class Java32_02_PrintTreesInLines  extends UtilAssert{
+public class Java32_02_PrintTreesInLines extends UtilAssert {
     //一个元素代表一行，元素之间不加任何符号。
     List<String> print(TreeNode head) {
         return null;

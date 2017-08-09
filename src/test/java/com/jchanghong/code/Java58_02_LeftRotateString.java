@@ -15,13 +15,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class Java58_02_LeftRotateString {
-    public String leftRotate(String text,int number) {
+    public String leftRotate(String text, int number) {
         return "";
     }
 
     @Test
     public void test() throws Exception {
-        Assert.assertEquals(leftRotate("abcdefg",2),"cdefgab");
-        Assert.assertEquals(leftRotate("abcdefg",1),"bcdefga");
+        Assert.assertEquals(leftRotate("abcdefg", 2), "cdefgab");
+        Assert.assertEquals(leftRotate("abcdefg", 1), "bcdefga");
     }
 }

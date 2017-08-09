@@ -16,7 +16,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 public class Java40_KLeastNumbers extends UtilAssert {
-    int[] kth(int[] ints,int k) {
+    int[] kth(int[] ints, int k) {
         return null;
     }
 

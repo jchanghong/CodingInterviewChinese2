@@ -10,7 +10,6 @@
 package com.jchanghong.code;
 
 import com.jchanghong.code.util.TreeNode;
-import com.jchanghong.code.util.TreeUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

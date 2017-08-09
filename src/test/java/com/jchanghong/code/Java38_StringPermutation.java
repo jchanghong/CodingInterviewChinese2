@@ -16,7 +16,7 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Java38_StringPermutation extends UtilAssert{
+public class Java38_StringPermutation extends UtilAssert {
     Set<String> allString(String text) {
         Set<String> strings = new HashSet<>();
         return strings;

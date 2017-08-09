@@ -17,8 +17,8 @@ import org.junit.Test;
 import java.io.StringReader;
 import java.util.Scanner;
 
-public class Java41_StreamMedian extends UtilAssert{
-    int media(Scanner scanner,int readnumber) {
+public class Java41_StreamMedian extends UtilAssert {
+    int media(Scanner scanner, int readnumber) {
         return 0;
     }
 
@@ -30,8 +30,8 @@ public class Java41_StreamMedian extends UtilAssert{
 //            System.out.println(scanner.nextInt());
         }
         eq(media(scanner, 1), 1);
-        eq(media(scanner, 2), 3/2);
-        eq(media(scanner, 4), 5/2);
+        eq(media(scanner, 2), 3 / 2);
+        eq(media(scanner, 4), 5 / 2);
         eq(media(scanner, 5), 3);
     }
 }

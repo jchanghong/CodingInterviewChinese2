@@ -10,6 +10,7 @@ package com.jchanghong.code.util;
 public class LinkNode {
     public Integer values;
     public LinkNode next;
+
     public LinkNode(Integer values, LinkNode next) {
         this.values = values;
         this.next = next;

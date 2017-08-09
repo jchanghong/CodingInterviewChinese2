@@ -13,7 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java43_NumberOf1 extends UtilAssert{
+public class Java43_NumberOf1 extends UtilAssert {
     int numberOf1(int n) {
         return 0;
     }

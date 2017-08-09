@@ -19,6 +19,7 @@ public class Java45_SortArrayForMinNumber extends UtilAssert {
     String min(int[] ints) {
         return "";
     }
+
     @Test
     public void test() throws Exception {
         int[] ints = {3, 32, 321};

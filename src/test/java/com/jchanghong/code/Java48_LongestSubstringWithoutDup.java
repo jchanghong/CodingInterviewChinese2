@@ -13,7 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java48_LongestSubstringWithoutDup extends UtilAssert{
+public class Java48_LongestSubstringWithoutDup extends UtilAssert {
     String sub(String text) {
         return text;
     }

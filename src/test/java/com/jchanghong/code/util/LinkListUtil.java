@@ -21,7 +21,7 @@ public class LinkListUtil {
         LinkNode me = null;
         LinkNode head = new LinkNode(ints[0], null);
         pre = head;
-        for (int i=1;i<ints.length;i++) {
+        for (int i = 1; i < ints.length; i++) {
             me = new LinkNode(ints[i], null);
             pre.next = me;
             pre = me;
@@ -40,8 +40,7 @@ public class LinkListUtil {
     public static boolean equels(LinkNode head1, LinkNode head2) {
         if (head1 == null || head1 == null) {
             return head1 == head2;
-        }
-        else {
+        } else {
             LinkNode node1 = head1;
             LinkNode node2 = head2;
             while (node1 != null && node2 != null) {

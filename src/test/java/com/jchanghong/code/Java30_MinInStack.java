@@ -13,20 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java30_MinInStack extends UtilAssert{
-
-    //实现下面3个函数
-    static class MyStack {
-        public void push(int i) {
-        }
-        public int pop() {
-            return 0;
-        }
-        public int min() {
-            return -1;
-        }
-
-    }
+public class Java30_MinInStack extends UtilAssert {
 
     @Test
     public void test() throws Exception {
@@ -39,5 +26,20 @@ public class Java30_MinInStack extends UtilAssert{
         eq(myStack.min(), 3);
         myStack.pop();
         eq(myStack.min(), 2);
+    }
+
+    //实现下面3个函数
+    static class MyStack {
+        public void push(int i) {
+        }
+
+        public int pop() {
+            return 0;
+        }
+
+        public int min() {
+            return -1;
+        }
+
     }
 }

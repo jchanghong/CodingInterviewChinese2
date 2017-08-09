@@ -14,7 +14,6 @@ import com.jchanghong.code.util.TreeNode;
 import com.jchanghong.code.util.TreeUtil;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
-import org.omg.CORBA.INTERNAL;
 
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class Java34_PathInTree extends UtilAssert {
 
       2            3
     * */
-    List<String> path(TreeNode head,int sum) {
+    List<String> path(TreeNode head, int sum) {
         return null;
     }
 

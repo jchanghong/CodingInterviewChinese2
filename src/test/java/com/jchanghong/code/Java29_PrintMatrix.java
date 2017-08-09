@@ -12,7 +12,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java29_PrintMatrix extends UtilAssert{
+public class Java29_PrintMatrix extends UtilAssert {
     //元素之间没有任何其他符号
     String print(int[][] ints) {
         return "";

@@ -14,7 +14,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java53_02_MissingNumber extends UtilAssert{
+public class Java53_02_MissingNumber extends UtilAssert {
     int missing(int[] ints, int n) {
         return 0;
     }

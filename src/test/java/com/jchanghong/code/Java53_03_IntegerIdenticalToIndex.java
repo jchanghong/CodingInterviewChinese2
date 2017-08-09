@@ -17,7 +17,7 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Java53_03_IntegerIdenticalToIndex extends UtilAssert{
+public class Java53_03_IntegerIdenticalToIndex extends UtilAssert {
     public Set<Integer> numbers(int[] ints) {
         Set<Integer> number = new HashSet<>();
         return number;

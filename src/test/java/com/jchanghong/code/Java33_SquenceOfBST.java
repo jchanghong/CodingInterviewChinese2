@@ -13,7 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java33_SquenceOfBST extends UtilAssert{
+public class Java33_SquenceOfBST extends UtilAssert {
     boolean aftersort(int[] ints) {
         return false;
     }

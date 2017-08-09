@@ -15,7 +15,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java31_StackPushPopOrder extends UtilAssert{
+public class Java31_StackPushPopOrder extends UtilAssert {
     boolean popOrder(int[] push, int[] pop) {
         return false;
     }

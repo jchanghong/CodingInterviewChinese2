@@ -13,7 +13,7 @@ import com.jchanghong.code.util.LinkNode;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java52_FirstCommonNodesInLists extends UtilAssert{
+public class Java52_FirstCommonNodesInLists extends UtilAssert {
     LinkNode parent(LinkNode f1, LinkNode f2) {
         return f1;
     }

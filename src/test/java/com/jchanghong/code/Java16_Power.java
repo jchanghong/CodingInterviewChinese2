@@ -22,6 +22,7 @@ public class Java16_Power {
     public boolean equels(double d1, double d2) {
         return Math.abs(d1 - d2) < 0.0000000000001;
     }
+
     @Test
     public void test() throws Exception {
         Assert.assertTrue(equels(Power(2.3, 4), Math.pow(2.3, 4)));

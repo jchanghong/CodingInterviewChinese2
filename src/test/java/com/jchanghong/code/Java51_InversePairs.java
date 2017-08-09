@@ -13,7 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java51_InversePairs extends UtilAssert{
+public class Java51_InversePairs extends UtilAssert {
     int number(int[] ints) {
         return 0;
     }

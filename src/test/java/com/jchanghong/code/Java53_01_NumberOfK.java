@@ -13,8 +13,8 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java53_01_NumberOfK extends UtilAssert{
-    int number(int[] ints,int number) {
+public class Java53_01_NumberOfK extends UtilAssert {
+    int number(int[] ints, int number) {
         return 0;
     }
 

@@ -3,8 +3,6 @@
  */
 package com.jchanghong.code;
 
-import org.junit.Test;
-
 public class Java02_SingletonTest {
     private static final Java02_SingletonTest SINGLETON = new Java02_SingletonTest();
 

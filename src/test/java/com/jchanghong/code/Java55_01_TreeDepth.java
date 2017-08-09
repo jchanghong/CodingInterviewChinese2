@@ -17,7 +17,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class Java55_01_TreeDepth extends UtilAssert{
+public class Java55_01_TreeDepth extends UtilAssert {
     public int treeDepth(TreeNode head) {
         return -1;
     }

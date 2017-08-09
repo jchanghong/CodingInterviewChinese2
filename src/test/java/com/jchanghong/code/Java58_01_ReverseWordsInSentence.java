@@ -14,7 +14,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java58_01_ReverseWordsInSentence extends UtilAssert{
+public class Java58_01_ReverseWordsInSentence extends UtilAssert {
     String reverseWord(String text) {
         return "";
     }

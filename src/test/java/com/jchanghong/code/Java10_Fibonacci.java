@@ -24,8 +24,8 @@ public class Java10_Fibonacci {
 
     @Test
     public void test() throws Exception {
-        for (int i=1;i<100;i++) {
-            Assert.assertEquals(get(i),testfunction(i));
+        for (int i = 1; i < 100; i++) {
+            Assert.assertEquals(get(i), testfunction(i));
         }
     }
 
@@ -34,7 +34,7 @@ public class Java10_Fibonacci {
             return 0;
         } else if (n == 1) {
             return 1;
-        } else   {
+        } else {
             return testfunction(n - 2) + testfunction(n - 1);
         }
     }

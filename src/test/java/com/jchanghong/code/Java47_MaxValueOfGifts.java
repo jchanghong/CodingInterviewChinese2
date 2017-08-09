@@ -15,7 +15,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java47_MaxValueOfGifts extends UtilAssert{
+public class Java47_MaxValueOfGifts extends UtilAssert {
     int max(int[][] gift) {
         return 0;
     }

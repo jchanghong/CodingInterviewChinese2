@@ -13,19 +13,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class Java06_PrintListInReversedOrder {
-    static class Node {
-        public Integer values;
-        public Node next;
-
-        public Node(Integer values, Node next) {
-            this.values = values;
-            this.next = next;
-        }
-    }
-
     public String print2String(Node head) {
         return "";
     }
+
     @Test
     public void test() throws Exception {
         Node head = new Node(1, null);
@@ -34,5 +25,15 @@ public class Java06_PrintListInReversedOrder {
         builder.append(2 + "");
         builder.append(1);
         Assert.assertEquals(builder.toString(), print2String(head));
+    }
+
+    static class Node {
+        public Integer values;
+        public Node next;
+
+        public Node(Integer values, Node next) {
+            this.values = values;
+            this.next = next;
+        }
     }
 }

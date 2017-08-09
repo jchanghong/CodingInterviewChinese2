@@ -13,7 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java50_01_FirstNotRepeatingChar extends UtilAssert{
+public class Java50_01_FirstNotRepeatingChar extends UtilAssert {
 
     char first(String text) {
         return 'f';

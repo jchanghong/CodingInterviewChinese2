@@ -13,11 +13,12 @@ import java.util.List;
 public class Const {
     static public List<Integer> integerList = new ArrayList<>(1000);
     static public List<String> stringList = new ArrayList<>(1000);
-   static {
-       for (int i=0;i<1000;i++) {
-           integerList.add(i);
-           stringList.add("hello" + i);
-       }
-   }
+
+    static {
+        for (int i = 0; i < 1000; i++) {
+            integerList.add(i);
+            stringList.add("hello" + i);
+        }
+    }
 
 }

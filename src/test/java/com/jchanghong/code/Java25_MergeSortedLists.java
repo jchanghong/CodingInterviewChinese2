@@ -11,8 +11,8 @@
  */
 package com.jchanghong.code;
 
-import com.jchanghong.code.util.LinkNode;
 import com.jchanghong.code.util.LinkListUtil;
+import com.jchanghong.code.util.LinkNode;
 import org.junit.Assert;
 import org.junit.Test;
 

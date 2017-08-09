@@ -23,11 +23,11 @@ public class Java66_ConstuctArray {
     @Test
     public void test() throws Exception {
         int[] ints = {1, 2, 3};
-        Assert.assertTrue(Arrays.equals(ints,new int[]{1,2,3}));
+        Assert.assertTrue(Arrays.equals(ints, new int[]{1, 2, 3}));
         ints = new int[]{1, 2, 3, 4, 5, 6, 6, 7, 7};
         Assert.assertTrue(Arrays.equals(function1(ints), constrct(ints)));
         ints = new int[]{1, 2, 0};
-        Assert.assertTrue(Arrays.equals(new int[]{0,0,2}, constrct(ints)));
+        Assert.assertTrue(Arrays.equals(new int[]{0, 0, 2}, constrct(ints)));
     }
 
     private int[] function1(int[] a) {
@@ -36,8 +36,8 @@ public class Java66_ConstuctArray {
             sun *= i;
         }
         int[] b = new int[a.length];
-        for (int i=0;i<b.length;i++) {
-                b[i] = sun / a[i];
+        for (int i = 0; i < b.length; i++) {
+            b[i] = sun / a[i];
         }
         return b;
     }

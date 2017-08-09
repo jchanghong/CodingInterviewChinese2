@@ -9,8 +9,9 @@ package com.jchanghong.code.util;
  */
 public class TreeNode {
     public Integer values;
-   public TreeNode left;
+    public TreeNode left;
     public TreeNode right;
+
     public TreeNode(Integer values, TreeNode left, TreeNode right) {
         this.values = values;
         this.left = left;

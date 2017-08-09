@@ -13,9 +13,32 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.AbstractQueue;
+import java.util.Iterator;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Java09_QueueWithTwoStacks {
+    public Queue<Integer> getQuene() {
+        Queue<Integer> queue = new MyQuene<>();
+        //实现下面那个函数
+//        queue.poll();
+//        queue.offer(1);
+        return queue;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Queue<Integer> queue = getQuene();
+        for (int i = 0; i < 1000; i++) {
+            queue.offer(i);
+        }
+        for (int i = 0; i < 1000; i++) {
+            Assert.assertEquals(queue.poll().intValue(), i);
+        }
+
+    }
+
     static class MyQuene<T> extends AbstractQueue<T> {
 
         private Stack<T> stack1 = new Stack<>();
@@ -36,6 +59,7 @@ public class Java09_QueueWithTwoStacks {
         public boolean offer(T t) {
             return false;
         }
+
         //需要实现-----------------------
         @Override
         public T poll() {
@@ -46,24 +70,5 @@ public class Java09_QueueWithTwoStacks {
         public T peek() {
             return null;
         }
-    }
-    public Queue<Integer> getQuene() {
-        Queue<Integer> queue = new MyQuene<>();
-        //实现下面那个函数
-//        queue.poll();
-//        queue.offer(1);
-        return queue;
-    }
-
-    @Test
-    public void test() throws Exception {
-        Queue<Integer> queue = getQuene();
-        for (int i=0;i<1000;i++) {
-            queue.offer(i);
-        }
-        for (int i=0;i<1000;i++) {
-            Assert.assertEquals(queue.poll().intValue(), i);
-        }
-
     }
 }

@@ -23,10 +23,11 @@ public class Java17_Print1ToMaxOfNDigits {
         list.add("1111111111111111111111111111111111111111111111");
         return list;
     }
+
     @Test
     public void test() throws Exception {
         List<String> list = from1ToN(3);
-        Assert.assertEquals(list.get(998),"999");
+        Assert.assertEquals(list.get(998), "999");
         list = from1ToN(6);
         Assert.assertEquals(list.get(999998), "999999");
         Assert.assertEquals(list.get(0), "1");

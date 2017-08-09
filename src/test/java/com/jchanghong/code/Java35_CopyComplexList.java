@@ -14,19 +14,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java35_CopyComplexList extends UtilAssert{
-    static class Node {
-        public int v;
-        public Node left;
-        public Node other;
-
-        public Node(int v, Node left, Node other) {
-            this.v = v;
-            this.left = left;
-            this.other = other;
-        }
-    }
-
+public class Java35_CopyComplexList extends UtilAssert {
     Node copy(Node head) {
         return null;
     }
@@ -40,5 +28,17 @@ public class Java35_CopyComplexList extends UtilAssert{
         Node copy = copy(hed);
         eq(copy.v, hed.v);
         eq(copy.other.v, hed.other.v);
+    }
+
+    static class Node {
+        public int v;
+        public Node left;
+        public Node other;
+
+        public Node(int v, Node left, Node other) {
+            this.v = v;
+            this.left = left;
+            this.other = other;
+        }
     }
 }

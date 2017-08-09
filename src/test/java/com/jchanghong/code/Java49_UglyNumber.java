@@ -14,7 +14,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java49_UglyNumber extends UtilAssert{
+public class Java49_UglyNumber extends UtilAssert {
     int uglyNumber(int kth) {
         return 0;
     }

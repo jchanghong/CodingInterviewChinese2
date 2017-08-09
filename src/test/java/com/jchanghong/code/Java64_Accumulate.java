@@ -23,7 +23,7 @@ public class Java64_Accumulate {
     public void test() throws Exception {
         System.out.println(sumtest(10));
         System.out.println(sumtest(100));
-        Const.integerList.forEach(a-> Assert.assertEquals(sumtest(a),sum(a)));
+        Const.integerList.forEach(a -> Assert.assertEquals(sumtest(a), sum(a)));
     }
 
     public int sumtest(int n) {

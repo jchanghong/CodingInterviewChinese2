@@ -19,6 +19,7 @@ public class Java18_01_DeleteNodeInList {
     public boolean removeMe(LinkNode head, LinkNode me) {
         return false;
     }
+
     @Test
     public void test() throws Exception {
         LinkNode head = new LinkNode(1, null);

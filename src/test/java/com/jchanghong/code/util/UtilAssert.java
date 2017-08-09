@@ -15,6 +15,7 @@ public class UtilAssert {
     protected void isTrue(boolean aBoolean) {
         org.junit.Assert.assertTrue(aBoolean);
     }
+
     protected void isFalse(boolean aBoolean) {
         org.junit.Assert.assertFalse(aBoolean);
     }

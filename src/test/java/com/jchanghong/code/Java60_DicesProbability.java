@@ -25,7 +25,7 @@ public class Java60_DicesProbability {
     public void test() throws Exception {
         Map<Integer, Double> map = pribility(1);
         Assert.assertTrue(map.containsKey(6));
-        Assert.assertTrue(map.get(6)==1.0 / 6);
+        Assert.assertTrue(map.get(6) == 1.0 / 6);
         map = pribility(2);
         Assert.assertTrue(map.containsKey(2));
         Assert.assertTrue(map.get(2) == 1.0 / 36);

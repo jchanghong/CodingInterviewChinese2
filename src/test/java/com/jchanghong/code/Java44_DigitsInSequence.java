@@ -14,7 +14,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java44_DigitsInSequence extends UtilAssert{
+public class Java44_DigitsInSequence extends UtilAssert {
 
     int digit(int k) {
         return 0;

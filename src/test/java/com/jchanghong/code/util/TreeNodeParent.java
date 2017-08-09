@@ -7,7 +7,7 @@ package com.jchanghong.code.util;
  * \* Time: 9:21
  * \
  */
-public class TreeNodeParent  {
+public class TreeNodeParent {
 
 
     public TreeNodeParent parent;

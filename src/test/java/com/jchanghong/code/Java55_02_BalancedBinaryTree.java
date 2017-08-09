@@ -17,7 +17,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class Java55_02_BalancedBinaryTree extends UtilAssert{
+public class Java55_02_BalancedBinaryTree extends UtilAssert {
     public boolean binary(TreeNode head) {
         return false;
     }

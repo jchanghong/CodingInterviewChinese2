@@ -13,7 +13,7 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-public class Java56_02_NumberAppearingOnce extends UtilAssert{
+public class Java56_02_NumberAppearingOnce extends UtilAssert {
 
     public int once(int[] ints) {
         return -1;
@@ -22,6 +22,6 @@ public class Java56_02_NumberAppearingOnce extends UtilAssert{
     @Test
     public void test() throws Exception {
         int[] ints = {1, 2, 2, 2};
-       eq (once(ints), 1);
+        eq(once(ints), 1);
     }
 }
