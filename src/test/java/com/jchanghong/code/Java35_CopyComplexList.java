@@ -14,8 +14,6 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-import java.awt.*;
-
 public class Java35_CopyComplexList extends UtilAssert{
     static class Node {
         public int v;
