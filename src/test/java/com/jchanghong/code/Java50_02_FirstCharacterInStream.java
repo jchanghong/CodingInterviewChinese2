@@ -30,18 +30,4 @@ public class Java50_02_FirstCharacterInStream extends UtilAssert {
         eq(first(reader, 2), 'g');
         eq(first(reader, 6), 'l');
     }
-
-    public static void main(String[] args) throws IOException {
-//        Reader reader = new StringReader("ddfdfdf");
-//        char in;
-//        do {
-//            int read = reader.read();
-//            if (read == -1) {
-//                break;
-//            }
-//            in = (char) read;
-//            System.out.println(in);
-//        }
-//        while (true);
-    }
 }
