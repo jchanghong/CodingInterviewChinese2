@@ -178,6 +178,7 @@ public class TreeUtil {
     public void testconst2() throws Exception {
         TreeNode node = construct2(1, 2, 3, -1, -1, 7, 9, 10);
         node = construct2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+        node = construct2(1, 2, 3, -1, -1, 6, 7, 10);
         print2(node);
 
     }
