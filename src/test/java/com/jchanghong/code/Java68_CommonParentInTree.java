@@ -9,7 +9,27 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java68_CommonParentInTree {
-    public static void main(String[] args) {
+
+    public TreeNode parent(TreeNode node1, TreeNode node2) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode head = new TreeNode(1, null, null);
+        head.left = new TreeNode(2, null, null);
+        TreeNode left = new TreeNode(3, null, null);
+        head.left.left = left;
+        TreeNode right = new TreeNode(4, null, null);
+        head.left.right = right;
+//        TreeUtil.print(head);
+        Assert.assertTrue(parent(right, left) == head.left);
+
     }
 }
