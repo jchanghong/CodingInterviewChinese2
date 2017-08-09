@@ -10,7 +10,17 @@
  */
 package com.jchanghong.code;
 
-public class Java51_InversePairs {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java51_InversePairs extends UtilAssert{
+    int number(int[] ints) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {7, 5, 6, 4};
+        eq(number(ints), 5);
     }
 }

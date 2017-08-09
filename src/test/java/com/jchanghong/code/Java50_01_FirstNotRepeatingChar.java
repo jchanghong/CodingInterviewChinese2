@@ -10,7 +10,18 @@
  */
 package com.jchanghong.code;
 
-public class Java50_01_FirstNotRepeatingChar {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java50_01_FirstNotRepeatingChar extends UtilAssert{
+
+    char first(String text) {
+        return 'f';
+    }
+
+    @Test
+    public void test() throws Exception {
+        eq(first("abaccdeff"), 'b');
+        eq(first("aabbvf"), 'v');
     }
 }

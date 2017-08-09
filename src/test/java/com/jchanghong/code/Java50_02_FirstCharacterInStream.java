@@ -11,7 +11,37 @@
  */
 package com.jchanghong.code;
 
-public class Java50_02_FirstCharacterInStream {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+
+public class Java50_02_FirstCharacterInStream extends UtilAssert {
+
+    char first(Reader reader, int readNumber) {
+        return 1;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Reader reader = new StringReader("google");
+        eq(first(reader, 2), 'g');
+        eq(first(reader, 6), 'l');
+    }
+
+    public static void main(String[] args) throws IOException {
+//        Reader reader = new StringReader("ddfdfdf");
+//        char in;
+//        do {
+//            int read = reader.read();
+//            if (read == -1) {
+//                break;
+//            }
+//            in = (char) read;
+//            System.out.println(in);
+//        }
+//        while (true);
     }
 }

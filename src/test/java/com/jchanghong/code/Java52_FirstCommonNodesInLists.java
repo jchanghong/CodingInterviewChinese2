@@ -9,7 +9,21 @@
  */
 package com.jchanghong.code;
 
-public class Java52_FirstCommonNodesInLists {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.LinkNode;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java52_FirstCommonNodesInLists extends UtilAssert{
+    LinkNode parent(LinkNode f1, LinkNode f2) {
+        return f1;
+    }
+
+    @Test
+    public void test() throws Exception {
+        LinkNode l1 = new LinkNode(1, null);
+        l1.next = new LinkNode(2, null);
+        l1.next.next = new LinkNode(3, null);
+        LinkNode l2 = new LinkNode(4, l1.next);
+        isTrue(parent(l1, l2) == l1.next);
     }
 }

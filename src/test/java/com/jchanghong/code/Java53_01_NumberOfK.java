@@ -10,7 +10,17 @@
  */
 package com.jchanghong.code;
 
-public class Java53_01_NumberOfK {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java53_01_NumberOfK extends UtilAssert{
+    int number(int[] ints,int number) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {1, 2, 3, 3, 3, 3, 4, 5};
+        eq(number(ints, 3), 4);
     }
 }
