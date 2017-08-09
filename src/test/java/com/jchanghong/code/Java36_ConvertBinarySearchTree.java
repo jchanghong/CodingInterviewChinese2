@@ -10,7 +10,22 @@
  */
 package com.jchanghong.code;
 
-public class Java36_ConvertBinarySearchTree {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.Arrays;
+
+public class Java36_ConvertBinarySearchTree extends UtilAssert {
+
+    TreeNode convert(TreeNode head) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode node = TreeUtil.construct(Arrays.asList(2, 1, 3));
+        isTrue(convert(node) == node.left);
     }
 }
