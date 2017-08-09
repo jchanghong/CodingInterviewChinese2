@@ -11,7 +11,23 @@
  */
 package com.jchanghong.code;
 
-public class Java49_UglyNumber {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java49_UglyNumber extends UtilAssert{
+    int uglyNumber(int kth) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        eq(uglyNumber(1), 1);
+        eq(uglyNumber(2), 2);
+        eq(uglyNumber(3), 3);
+        eq(uglyNumber(4), 4);
+        eq(uglyNumber(5), 5);
+        eq(uglyNumber(6), 6);
+        eq(uglyNumber(7), 7);
+        eq(uglyNumber(8), 8);
     }
 }

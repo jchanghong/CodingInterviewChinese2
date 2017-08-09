@@ -10,7 +10,18 @@
  */
 package com.jchanghong.code;
 
-public class Java48_LongestSubstringWithoutDup {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java48_LongestSubstringWithoutDup extends UtilAssert{
+    String sub(String text) {
+        return text;
+    }
+
+    @Test
+    public void test() throws Exception {
+        eq(sub("abc"), "abc");
+        eq(sub("abcbc"), "abc");
+        eq("aabcdff", "abcdf");
     }
 }
