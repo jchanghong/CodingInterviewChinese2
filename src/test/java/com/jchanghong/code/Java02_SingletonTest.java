@@ -17,10 +17,6 @@ public class Java02_SingletonTest {
                 SINGLETON;
     }
 
-    @Test
-    public void main() throws Exception {
-        Java02_SingletonTest java02_singleton = Java02_SingletonTest.getSingleton();
-    }
 
     enum Sington {
         SINGTON
