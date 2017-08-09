@@ -101,7 +101,7 @@ public class TreeUtil {
      * @param ints 层次遍历，-1表示空节点。比如1，-1，-1 代表一个节点1
      * @return
      */
-    public TreeNode construct2(int... list) {
+    public static TreeNode construct2(int... list) {
         Queue<TreeNode> queue = new LinkedList<>();
         TreeNode treeNode = new TreeNode(list[0], null, null);
         queue.offer(treeNode);
