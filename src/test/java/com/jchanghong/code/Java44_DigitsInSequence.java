@@ -11,7 +11,20 @@
  */
 package com.jchanghong.code;
 
-public class Java44_DigitsInSequence {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java44_DigitsInSequence extends UtilAssert{
+
+    int digit(int k) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        //数字以0123456789101112131415
+        eq(digit(5), 5);
+        eq(digit(13), 1);
+        eq(digit(19), 4);
     }
 }
