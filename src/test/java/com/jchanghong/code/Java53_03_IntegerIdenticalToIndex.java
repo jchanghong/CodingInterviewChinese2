@@ -11,7 +11,21 @@
  */
 package com.jchanghong.code;
 
-public class Java53_03_IntegerIdenticalToIndex {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Java53_03_IntegerIdenticalToIndex extends UtilAssert{
+    public Set<Integer> numbers(int[] ints) {
+        Set<Integer> number = new HashSet<>();
+        return number;
+    }
+
+    @Test
+    public void test() throws Exception {
+        Set<Integer> integers = numbers(new int[]{-3, -1, 1, 3, 5});
+        isTrue(integers.contains(3));
     }
 }
