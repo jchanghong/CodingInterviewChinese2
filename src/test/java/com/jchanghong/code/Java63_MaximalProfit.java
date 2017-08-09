@@ -12,7 +12,18 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Java63_MaximalProfit {
-    public static void main(String[] args) {
+    public int max(int[] ints) {
+
+        return -1;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {9, 11, 8, 5, 7, 12, 16, 14};
+        Assert.assertEquals(max(ints), 11);
     }
 }
