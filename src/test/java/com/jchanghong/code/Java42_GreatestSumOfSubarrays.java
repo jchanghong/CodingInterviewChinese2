@@ -10,7 +10,18 @@
  */
 package com.jchanghong.code;
 
-public class Java42_GreatestSumOfSubarrays {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java42_GreatestSumOfSubarrays extends UtilAssert{
+
+    int max(int[] ints) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {1,- 2, 3, 10, -4, 7, 2, -5};
+        eq(max(ints), 18);
     }
 }
