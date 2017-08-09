@@ -12,7 +12,20 @@
  */
 package com.jchanghong.code;
 
-public class Java31_StackPushPopOrder {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java31_StackPushPopOrder extends UtilAssert{
+    boolean popOrder(int[] push, int[] pop) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints1 = {1, 2, 3, 4, 5};
+        int[] ints2 = {4, 5, 3, 2, 1};
+        int[] ints3 = {4, 3, 5, 1, 2};
+        isTrue(popOrder(ints1, ints2));
+        isFalse(popOrder(ints1, ints3));
     }
 }
