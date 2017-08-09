@@ -10,7 +10,54 @@
  */
 package com.jchanghong.code;
 
-public class Java57_01_TwoNumbersWithSum {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Java57_01_TwoNumbersWithSum extends UtilAssert{
+    public Pair function(int[] number,int sum) {
+        return null;
+    }
+    static class Pair {
+        public int a = 0;
+        public int b = 0;
+
+        public Pair(int start, int end) {
+            this.a = start;
+            this.b = end;
+        }
+        @Override
+        public String toString() {
+            return a + "->" + b;
+        }
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            else if (obj instanceof Pair) {
+                Pair o = (Pair) obj;
+                return o.a == a && o.b == b;
+            }
+            else
+                return false;
+        }
+
+        @Override
+        public int hashCode() {
+            return toString().hashCode();
+        }
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {1, 2, 3, 4, 5, 6};
+        Set<Pair> set = new HashSet<>();
+        set.add(new Pair(1, 6));
+        set.add(new Pair(2, 5));
+        set.add(new Pair(3, 4));
+        isTrue(set.contains(function(ints, 7)));
     }
 }
