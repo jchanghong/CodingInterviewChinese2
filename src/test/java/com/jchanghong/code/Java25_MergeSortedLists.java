@@ -12,7 +12,7 @@
 package com.jchanghong.code;
 
 import com.jchanghong.code.util.LinkNode;
-import com.jchanghong.code.util.LinkUtil;
+import com.jchanghong.code.util.LinkListUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -24,9 +24,9 @@ public class Java25_MergeSortedLists {
 
     @Test
     public void test() throws Exception {
-        LinkNode head1 = LinkUtil.construct(1, 4, 6);
-        LinkNode head2 = LinkUtil.construct(2, 5, 7, 9, 100);
-        LinkNode h3 = LinkUtil.construct(1, 2, 4, 5, 6, 7, 9, 100);
-        Assert.assertTrue(LinkUtil.equels(h3, mergelist(head1, head2)));
+        LinkNode head1 = LinkListUtil.construct(1, 4, 6);
+        LinkNode head2 = LinkListUtil.construct(2, 5, 7, 9, 100);
+        LinkNode h3 = LinkListUtil.construct(1, 2, 4, 5, 6, 7, 9, 100);
+        Assert.assertTrue(LinkListUtil.equels(h3, mergelist(head1, head2)));
     }
 }

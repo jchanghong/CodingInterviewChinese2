@@ -12,7 +12,7 @@ import java.util.Objects;
  * \* Time: 18:06
  * \
  */
-public class LinkUtil {
+public class LinkListUtil {
     public static LinkNode construct(int... ints) {
         if (ints.length == 0) {
             return null;
