@@ -11,7 +11,17 @@
  */
 package com.jchanghong.code;
 
-public class Java58_01_ReverseWordsInSentence {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java58_01_ReverseWordsInSentence extends UtilAssert{
+    String reverseWord(String text) {
+        return "";
+    }
+
+    @Test
+    public void test() throws Exception {
+        eq(reverseWord("I am a student. "), "student. a am I");
+        eq(reverseWord("am"), "am");
     }
 }
