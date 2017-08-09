@@ -11,7 +11,20 @@
  */
 package com.jchanghong.code;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.Arrays;
+
 public class Java59_01_MaxInSlidingWindow {
-    public static void main(String[] args) {
+    public int[] maxs(int[] number, int size) {
+        return number;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {2, 3, 4, 2, 6, 2, 5, 1};
+        int size = 3;
+        Assert.assertTrue(Arrays.equals(maxs(ints, size), new int[]{4, 4, 6, 6, 6, 5}));
     }
 }
