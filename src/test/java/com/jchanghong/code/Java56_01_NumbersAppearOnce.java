@@ -10,7 +10,23 @@
  */
 package com.jchanghong.code;
 
-public class Java56_01_NumbersAppearOnce {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.List;
+
+public class Java56_01_NumbersAppearOnce extends UtilAssert {
+    List<Integer> two(int[] ints) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[] ints = {1, 2, 3, 4, 2, 3};
+        List<Integer> list = two(ints);
+        eq(list.size(), 2);
+        isTrue(list.contains(1));
+        isTrue(list.contains(4));
+
     }
 }
