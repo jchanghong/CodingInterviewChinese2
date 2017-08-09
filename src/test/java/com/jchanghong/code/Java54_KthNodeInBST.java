@@ -9,7 +9,23 @@
  */
 package com.jchanghong.code;
 
-public class Java54_KthNodeInBST {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.Arrays;
+
+public class Java54_KthNodeInBST extends UtilAssert{
+    TreeNode kth(TreeNode head,int k) {
+        return null;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode head = TreeUtil.construct(Arrays.asList(2, 1, 3));
+        isTrue(kth(head, 1) == head.left);
+        isTrue(kth(head, 2) == head);
+        isTrue(kth(head, 3)==head.right);
     }
 }
