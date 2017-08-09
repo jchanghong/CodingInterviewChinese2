@@ -10,7 +10,26 @@
  */
 package com.jchanghong.code;
 
-public class Java55_02_BalancedBinaryTree {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.TreeNode;
+import com.jchanghong.code.util.TreeUtil;
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+import java.util.Arrays;
+
+public class Java55_02_BalancedBinaryTree extends UtilAssert{
+    public boolean binary(TreeNode head) {
+        return false;
+    }
+
+    @Test
+    public void test() throws Exception {
+        TreeNode node = TreeUtil.construct(Arrays.asList(1, 2, 3));
+        isTrue(binary(node));
+        TreeNode node1 = new TreeNode(1, null, null);
+        node.left = new TreeNode(2, null, null);
+        node.left.left = new TreeNode(3, null, null);
+        isFalse(binary(node1));
+
     }
 }
