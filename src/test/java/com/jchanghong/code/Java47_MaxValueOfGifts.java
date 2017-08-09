@@ -12,7 +12,23 @@
  */
 package com.jchanghong.code;
 
-public class Java47_MaxValueOfGifts {
-    public static void main(String[] args) {
+import com.jchanghong.code.util.UtilAssert;
+import org.junit.Test;
+
+public class Java47_MaxValueOfGifts extends UtilAssert{
+    int max(int[][] gift) {
+        return 0;
+    }
+
+    @Test
+    public void test() throws Exception {
+        int[][] ints = {
+                {1, 10, 3, 8},
+                {12, 2, 9, 6},
+                {5, 7, 4, 11}
+                ,
+                {3, 7, 16, 5}
+        };
+        eq(max(ints), 15);
     }
 }
