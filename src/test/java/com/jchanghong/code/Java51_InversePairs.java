@@ -15,7 +15,15 @@ import org.junit.Test;
 
 public class Java51_InversePairs extends UtilAssert {
     int number(int[] ints) {
-        return 0;
+        int sum = 0;
+     for (int i=0;i<ints.length;i++) {
+         for (int j = i + 1; j < ints.length; j++) {
+             if (ints[i] > ints[j]) {
+                 sum++;
+             }
+         }
+     }
+         return sum;
     }
 
     @Test
