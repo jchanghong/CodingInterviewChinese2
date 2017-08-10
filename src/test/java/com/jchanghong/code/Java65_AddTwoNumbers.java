@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class Java65_AddTwoNumbers {
     public int sum(int int1, int int2) {
-        return 0;
+        return int1+int2;
     }
 
     @Test
