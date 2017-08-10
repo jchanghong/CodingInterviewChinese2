@@ -14,9 +14,35 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.StringReader;
+import java.util.Scanner;
+
 public class Java20_NumericStrings {
     public boolean isNumber(String string) {
-        return false;
+        Scanner scanner = new Scanner(new StringReader(string));
+        int state = 0;//0 下一个是数字，1=下一个不是数字
+        while (scanner.hasNext()) {
+            if (state == 0) {
+                if (scanner.hasNextDouble()) {
+                    state = 1;
+                    scanner.nextDouble();
+                    continue;
+                } else return false;
+
+            }
+            if (state == 1) {
+                if (scanner.hasNextByte()) {
+                    state = 0;
+                    char c = (char) scanner.nextByte();
+                    if (c != 'e') {
+                        return false;
+                    }
+                    continue;
+                }
+            }
+
+        }
+        return true;
     }
 
     @Test
