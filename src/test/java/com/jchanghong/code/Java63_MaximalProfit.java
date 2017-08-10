@@ -17,10 +17,54 @@ import org.junit.Test;
 
 public class Java63_MaximalProfit {
     public int max(int[] ints) {
-
-        return -1;
+        return recMax(ints, 0, ints.length-1);
     }
 
+    public int recMax(int[] ints, int start, int end) {
+        if (start == end) {
+            return ints[start];
+        }
+        if (end - start == 1) {
+            return ints[end] - ints[start];
+        }
+        if (start > end) {
+            return Integer.MIN_VALUE;
+        }
+        int m = (start + end) / 2;
+        int maxm = recMax(ints, start, m);
+        int max2 = recMax(ints, m+1, end);
+        int max3 = max(ints, m+1, end) - min(ints, start, m);
+        return maxof(maxm, max2, max3);
+    }
+
+    int min(int[] ints, int start, int end) {
+        int min = Integer.MAX_VALUE;
+        for (int i=start;i<=end;i++) {
+            if (ints[i] < min) {
+                min = ints[i];
+            }
+        }
+        return min;
+    }
+    int max(int[] ints, int start, int end) {
+        int min = Integer.MIN_VALUE;
+        for (int i=start;i<=end;i++) {
+            if (ints[i] >min) {
+                min = ints[i];
+            }
+        }
+        return min;
+    }
+
+    int maxof(int... ints) {
+        int min = Integer.MIN_VALUE;
+        for (int anInt : ints) {
+            if (anInt > min) {
+                min = anInt;
+            }
+        }
+        return min;
+    }
     @Test
     public void test() throws Exception {
         int[] ints = {9, 11, 8, 5, 7, 12, 16, 14};
