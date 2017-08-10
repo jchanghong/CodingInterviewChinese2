@@ -15,10 +15,34 @@ import com.jchanghong.code.util.LinkNode;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.WeakHashMap;
+
 public class Java18_02_DeleteDuplicatedNode {
 
     public LinkNode removeDeplicated(LinkNode head) {
+        Set<Integer> set = new HashSet<>();
+        LinkNode node = head;
+        while (node != null) {
+            if (set.contains(node.values)) {
+                node = remove_next(head, node);
+            }
+            else {
+                set.add(node.values);
+            }
+            node = node.next;
+        }
         return head;
+    }
+
+    LinkNode remove_next(LinkNode head, LinkNode node) {
+        LinkNode pre = head;
+        while (pre.next != node) {
+            pre = pre.next;
+        }
+        pre.next = node.next;
+        return node.next;
     }
 
     @Test
