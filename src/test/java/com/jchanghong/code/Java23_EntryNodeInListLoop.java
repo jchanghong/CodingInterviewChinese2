@@ -15,8 +15,23 @@ import com.jchanghong.code.util.LinkNode;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Java23_EntryNodeInListLoop {
     public LinkNode entrynode(LinkNode head) {
+        Set<LinkNode> set = new HashSet<>();
+        LinkNode node = head;
+        set.add(node);
+        while (node != null) {
+            node = node.next;
+            if (set.contains(node)) {
+                return node;
+            }
+            else {
+                set.add(node);
+            }
+        }
         return null;
     }
 
