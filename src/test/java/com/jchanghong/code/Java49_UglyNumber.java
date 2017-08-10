@@ -14,9 +14,43 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Java49_UglyNumber extends UtilAssert {
+    boolean isUgly(int number) {
+        while (number % 2 == 0) {
+            number = number / 2;
+        }
+        while (number % 3 == 0) {
+            number = number / 3;
+        }
+        while (number % 5 == 0) {
+            number = number / 5;
+        }
+        return number == 1;
+    }
+
+    @Test
+    public void testis() throws Exception {
+        isTrue(isUgly(6));
+        isTrue(isUgly(8));
+        isFalse(isUgly(14));
+    }
+
     int uglyNumber(int kth) {
-        return 0;
+        List<Integer> list = new ArrayList<>();
+        list.add(0);
+        list.add(1);
+        for (int i=2;i<Integer.MAX_VALUE;i++) {
+            if (isUgly(i)) {
+                list.add(i);
+                if (list.size() > kth + 1) {
+                    break;
+                }
+            }
+        }
+        return list.get(kth);
     }
 
     @Test
@@ -27,7 +61,7 @@ public class Java49_UglyNumber extends UtilAssert {
         eq(uglyNumber(4), 4);
         eq(uglyNumber(5), 5);
         eq(uglyNumber(6), 6);
-        eq(uglyNumber(7), 7);
-        eq(uglyNumber(8), 8);
+        eq(uglyNumber(7), 8);
+        eq(uglyNumber(8), 9);
     }
 }
