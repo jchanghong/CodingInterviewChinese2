@@ -25,7 +25,7 @@ public class Java20_NumericStrings {
         Assert.assertTrue(isNumber("5e2"));
         Assert.assertTrue(isNumber("3.1233"));
         Assert.assertFalse(isNumber("12e"));
-        Assert.assertFalse(isNumber("1la3.13"));
+        Assert.assertFalse(isNumber("11e3.13"));
         Assert.assertFalse(isNumber("1.2.3"));
     }
 }
