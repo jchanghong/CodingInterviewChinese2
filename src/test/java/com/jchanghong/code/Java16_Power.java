@@ -16,7 +16,32 @@ import org.junit.Test;
 public class Java16_Power {
 
     public double Power(double base, int exponent) {
-        return 0.0;
+        boolean f = false;
+        if (exponent < 0) {
+            f = true;
+        }
+        if (f) {
+            double d = power1(base, -exponent);
+            if (!equels(d,0.0)) {
+                return 1 / d;
+            }
+            else {
+                return d;
+            }
+
+        }
+        else {
+            return power1(base, exponent);
+        }
+    }
+
+    //base不等于0，e大于0
+    public double power1(double base, int e) {
+        double bae = 1;
+        for (int i=0;i<e;i++) {
+            bae *= base;
+        }
+        return bae;
     }
 
     public boolean equels(double d1, double d2) {
