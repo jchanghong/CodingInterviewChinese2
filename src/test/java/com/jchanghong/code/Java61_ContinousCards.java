@@ -13,10 +13,26 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class Java61_ContinousCards {
     //0是王
     public boolean continous(int[] cards) {
-        return false;
+         Arrays.sort(cards);
+        int number0 = 0;
+        for (int card : cards) {
+            if (card == 0) {
+                number0++;
+            }
+            else {
+                break;
+            }
+        }
+        int numberslip = 0;
+        for (int i=number0+1;i<cards.length;i++) {
+            numberslip += (cards[i] - cards[i-1]-1);
+        }
+        return number0 >= numberslip;
     }
 
     @Test
