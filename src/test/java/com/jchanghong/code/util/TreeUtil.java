@@ -15,14 +15,26 @@ import java.util.*;
 public class TreeUtil {
 
     public static boolean valuesEqual(TreeNode tree1, TreeNode tree2) {
-        if (Objects.equals(tree1, tree2)) {
+        if (tree1 == null && tree2 == null) {
             return true;
-        } else if (tree1 == null || tree2 == null) {
-            return false;
-        } else if (tree1.values.equals(tree2.values)) {
-            return valuesEqual(tree1.left, tree2.left) && valuesEqual(tree1.right, tree2.right);
         }
-        return false;
+        if (tree1 == null || tree2 == null) {
+            return false;
+        }
+        if (tree1.values.equals(tree2.values)) {
+            return valuesEqual(tree1.left, tree2.left) && valuesEqual(tree1.right, tree2.right);
+        } else  {
+            return false;
+        }
+    }
+
+    @Test
+    public void testEQ() throws Exception {
+        TreeNode node1 = construct2(1, 2, 3);
+        TreeNode node2 = construct2(1, 2, 3);
+        Assert.assertTrue(valuesEqual(node1,node2));
+        node2 = construct2(2, 1, 3);
+        Assert.assertFalse(valuesEqual(node1, node2));
     }
 
     /**
