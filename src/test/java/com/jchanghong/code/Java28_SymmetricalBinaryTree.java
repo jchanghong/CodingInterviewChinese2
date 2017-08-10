@@ -19,11 +19,8 @@ import java.util.Arrays;
 
 public class Java28_SymmetricalBinaryTree {
     public boolean isSym(TreeNode head) {
-        TreeUtil.print2(head);
-
         Java27_MirrorOfBinaryTree tree = new Java27_MirrorOfBinaryTree();
         TreeNode h1 = tree.mirror(head);
-        TreeUtil.print2(h1);
         boolean b = TreeUtil.valuesEqual(head, h1);
         return b;
     }

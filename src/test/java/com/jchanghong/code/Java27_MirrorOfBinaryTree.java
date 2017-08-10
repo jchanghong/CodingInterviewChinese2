@@ -18,6 +18,9 @@ import java.util.Arrays;
 
 public class Java27_MirrorOfBinaryTree {
     public TreeNode mirror(TreeNode head) {
+        return mirror2(TreeUtil.clone(head));
+    }
+    public TreeNode mirror2(TreeNode head) {
         if (head == null) {
             return null;
         }
