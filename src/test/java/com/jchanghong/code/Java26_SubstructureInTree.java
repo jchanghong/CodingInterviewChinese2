@@ -15,7 +15,31 @@ import org.junit.Test;
 
 public class Java26_SubstructureInTree {
     public boolean issubTree(TreeNode head1, TreeNode head2) {
-        return false;
+        if (head1 == null || head2 == null) {
+            return false;
+        }
+        if (hasSubtree(head1, head2)) {
+            return true;
+        }
+        else {
+            return issubTree(head1.left, head2) || issubTree(head1.right, head2);
+        }
+    }
+
+    public boolean hasSubtree(TreeNode me, TreeNode head2) {
+        if (head2 == null) {
+            return true;
+        }
+        if (me == null) {
+            return false;
+        }
+        if (me.values.equals(head2.values)) {
+            return hasSubtree(me.left, head2.left) && hasSubtree(me.right, head2.right);
+        }
+        else
+        {
+            return false;
+        }
     }
 
     @Test
