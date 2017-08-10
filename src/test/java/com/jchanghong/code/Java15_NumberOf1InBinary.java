@@ -15,7 +15,13 @@ import org.junit.Test;
 
 public class Java15_NumberOf1InBinary {
     public int number(int n) {
-        return -1;
+        int n1 = n;
+        int number = 0;
+        while (n1 != 0) {
+            n1 = n1 & (n1 - 1);
+            number++;
+        }
+        return number;
     }
 
     @Test
