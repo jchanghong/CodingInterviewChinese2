@@ -21,8 +21,8 @@ public class Java67_StringToInt {
     @Test
     public void test() throws Exception {
         Assert.assertEquals(str2Int("2"), 2);
-        Assert.assertEquals(str2Int("22"), 2);
-        Assert.assertEquals(str2Int("-22"), -2);
+        Assert.assertEquals(str2Int("22"), 22);
+        Assert.assertEquals(str2Int("-22"), -22);
         Assert.assertEquals(str2Int("44422"), 44422);
     }
 }
