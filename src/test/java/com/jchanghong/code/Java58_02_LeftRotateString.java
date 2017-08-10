@@ -16,7 +16,9 @@ import org.junit.Test;
 
 public class Java58_02_LeftRotateString {
     public String leftRotate(String text, int number) {
-        return "";
+        String left = text.substring(0, number);
+        String rigth = text.substring(number);
+        return rigth + left;
     }
 
     @Test
