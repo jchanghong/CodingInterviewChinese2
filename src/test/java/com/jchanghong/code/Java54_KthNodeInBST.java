@@ -18,7 +18,24 @@ import java.util.Arrays;
 
 public class Java54_KthNodeInBST extends UtilAssert {
     TreeNode kth(TreeNode head, int k) {
-        return null;
+        int[] me = {0};
+        return rec(head, me, k);
+    }
+
+    TreeNode rec(TreeNode head, int[] me,int k) {
+        if (head == null ) {
+            return null;
+        }
+        TreeNode left = rec(head.left, me, k);
+        if (left != null) {
+            return left;
+        }
+        me[0] = me[0]+1;
+        if (me[0] == k) {
+            return head;
+        }
+        left = rec(head.right, me, k);
+        return left;
     }
 
     @Test
