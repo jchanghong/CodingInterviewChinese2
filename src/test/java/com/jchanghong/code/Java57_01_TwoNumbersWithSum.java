@@ -18,6 +18,19 @@ import java.util.Set;
 
 public class Java57_01_TwoNumbersWithSum extends UtilAssert {
     public Pair function(int[] number, int sum) {
+        int start = 0;
+        int end = number.length - 1;
+        while (start < end) {
+            int i = number[start] + number[end];
+            if (i == sum) {
+                return new Pair(number[start], number[end]);
+            } else if (i < sum) {
+                end--;
+            }
+            else {
+                start++;
+            }
+        }
         return null;
     }
 
