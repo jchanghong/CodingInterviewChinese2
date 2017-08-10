@@ -16,7 +16,11 @@ import org.junit.Test;
 
 public class Java53_02_MissingNumber extends UtilAssert {
     int missing(int[] ints, int n) {
-        return 0;
+        int sum = (0 + n - 1) * n / 2;
+        for (int anInt : ints) {
+            sum -= anInt;
+        }
+        return sum;
     }
 
     @Test
