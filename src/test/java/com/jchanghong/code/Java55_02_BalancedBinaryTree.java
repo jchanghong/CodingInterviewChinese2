@@ -47,9 +47,7 @@ public class Java55_02_BalancedBinaryTree extends UtilAssert {
     public void test() throws Exception {
         TreeNode node = TreeUtil.construct(Arrays.asList(1, 2, 3));
         isTrue(binary(node));
-        TreeNode node1 = new TreeNode(1, null, null);
-        node.left = new TreeNode(2, null, null);
-        node.left.left = new TreeNode(3, null, null);
+        TreeNode node1 = TreeUtil.construct2(1, 2, -1, 3);
         isFalse(binary(node1));
 
     }
