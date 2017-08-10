@@ -22,6 +22,6 @@ public class Java48_LongestSubstringWithoutDup extends UtilAssert {
     public void test() throws Exception {
         eq(sub("abc"), "abc");
         eq(sub("abcbc"), "abc");
-        eq("aabcdff", "abcdf");
+        eq(sub("aabcdff"), "abcdf");
     }
 }
