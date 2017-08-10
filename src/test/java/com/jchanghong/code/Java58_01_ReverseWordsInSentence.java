@@ -16,7 +16,13 @@ import org.junit.Test;
 
 public class Java58_01_ReverseWordsInSentence extends UtilAssert {
     String reverseWord(String text) {
-        return "";
+        text = text.trim();
+        String[] strings=text.split("\\s+");
+        StringBuilder builder = new StringBuilder();
+        for (int i=strings.length-1;i>=0;i--) {
+            builder.append(strings[i] + " ");
+        }
+        return builder.toString().trim();
     }
 
     @Test
