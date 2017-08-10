@@ -29,7 +29,7 @@ public class Java07_ConstructBinaryTree {
     public void test() throws Exception {
         List<Integer> center = Arrays.asList(2, 1, 3);
         List<Integer> befor = Arrays.asList(1, 2, 3);
-        TreeNode head = new TreeNode(2, null, null);
+        TreeNode head = new TreeNode(1, null, null);
         head.left = new TreeNode(2, null, null);
         head.right = new TreeNode(3, null, null);
         Assert.assertEquals(TreeUtil.valuesEqual(construct(center, befor), head), true);
