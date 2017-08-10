@@ -20,10 +20,53 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.logging.XMLFormatter;
+
 public class Java12_StringPathInMatrix {
 
     public boolean havePath(char[][] chars, String string) {
+        boolean[][] visit = new boolean[chars.length][chars[0].length];
+        for (int i=0;i<chars.length;i++) {
+            for (int j=0;j<chars[i].length;j++) {
+                visit[i][j] = false;
+            }
+        }
+        int index = 0;
+        for (int i=0;i<chars.length;i++) {
+            for (int j=0;j<chars[i].length;j++) {
+                if (havepath(chars, visit, i, j, string, index)) {
+                    return true;
+                }
+            }
+        }
         return false;
+    }
+
+    public boolean havepath(char[][] chars,boolean[][] visit, int x, int y, String string,int index) {
+        if (index == string.length()) {
+            return true;
+        }
+        if (x < 0 || y < 0 || x >= chars.length || y >= chars[0].length) {
+            return false;
+        }
+        if (visit[x][y]) {
+            return false;
+        }
+        else {
+            if (chars[x][y] == string.charAt(index)) {
+                visit[x][y] = true;
+                boolean re= havepath(chars, visit, x + 1, y, string, index + 1) ||
+                        havepath(chars, visit, x, y + 1, string, index + 1) ||
+                        havepath(chars, visit, x - 1, y, string, index + 1) ||
+                        havepath(chars, visit, x, y - 1, string, index + 1);
+                if (re == false) {
+                    index--;
+                    visit[x][y] = false;
+                }
+                return re;
+            }
+            return false;
+        }
     }
 
     @Test
