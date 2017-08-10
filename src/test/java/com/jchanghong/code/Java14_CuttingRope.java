@@ -18,7 +18,36 @@ import org.junit.Test;
 public class Java14_CuttingRope {
     //-1表示参数错误
     public int max(int n) {
-        return 0;
+        //0刀=n
+        //1刀=max(i)*max(n-i)
+        if (n == 2) {
+            return 2;
+        }
+        if (n == 3) {
+            return 3;
+        }
+        if (n == 4) {
+            return 4;
+        }
+        int max = n;
+
+        for (int i=1;i<n>>2+1;i++) {
+            int n1 = max(i) * max(n - i);
+            if (n1 > max) {
+                max = n1;
+            }
+        }
+        return max;
+    }
+
+    int max2(int... ints) {
+        int max = Integer.MIN_VALUE;
+        for (int anInt : ints) {
+            if (anInt > max) {
+                max = anInt;
+            }
+        }
+        return max;
     }
 
     @Test
