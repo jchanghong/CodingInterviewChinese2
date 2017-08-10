@@ -13,9 +13,27 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 
 public class Java21_ReorderArray {
     public void reorderArray(int[] ints) {
+        int start = 0;
+        int end = ints.length - 1;
+        while (start < end) {
+            while (start<end&&(ints[start] & 1) == 1) {
+                start++;
+            }
+            while ((start<end)&&(ints[end] & 1) == 0) {
+                end--;
+            }
+            if (start < end) {
+                int stemp = ints[start];
+                ints[start] = ints[end];
+                ints[end] = stemp;
+            }
+
+        }
     }
 
     @Test
@@ -23,6 +41,7 @@ public class Java21_ReorderArray {
         int[] ints = {1, 2, 3, 4, 5, 5};
         Assert.assertFalse(trueArray(ints));
         reorderArray(ints);
+        System.out.println(Arrays.toString(ints));
         Assert.assertTrue(trueArray(ints));
         ints = new int[]{3, 4, 5, 55, 55, 55, 88, 88};
         Assert.assertFalse(trueArray(ints));
