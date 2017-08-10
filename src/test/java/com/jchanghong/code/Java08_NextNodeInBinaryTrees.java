@@ -12,11 +12,41 @@ package com.jchanghong.code;
 
 import com.jchanghong.code.util.TreeNodeParent;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 public class Java08_NextNodeInBinaryTrees {
+    @Before
+    public void setUp() throws Exception {
+        deque.clear();
+        next = null;
+    }
+
+    private Deque<TreeNodeParent> deque = new LinkedList<>();
+    TreeNodeParent next;
     public TreeNodeParent getnext(TreeNodeParent head, TreeNodeParent node) {
+        if (head == null) {
+            return null;
+        }
+        getnext(head.left,node);
+        if (deque.poll() == node) {
+            next = head;
+            return next;
+        }
+        deque.offer(head);
+        getnext(head.right, node);
         return null;
+    }
+
+    private TreeNodeParent leftest(TreeNodeParent nodeParent) {
+        TreeNodeParent parent = nodeParent;
+        while (parent.left != null) {
+            parent = parent.left;
+        }
+        return parent;
     }
 
     @Test
