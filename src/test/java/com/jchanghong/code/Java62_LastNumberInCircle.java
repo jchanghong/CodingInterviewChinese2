@@ -15,7 +15,25 @@ import org.junit.Test;
 
 public class Java62_LastNumberInCircle {
     public int lastNumber(int[] ints) {
+
         return -1;
+    }
+
+    int next(int size, int m, int start) {
+        int next = start;
+        while (m > 0) {
+            next++;
+            if (next == size) {
+                next = 0;
+            }
+            m--;
+        }
+        return next;
+    }
+
+    @Test
+    public void testnext() throws Exception {
+        System.out.println(next(3, 1, 2));
     }
 
     @Test
