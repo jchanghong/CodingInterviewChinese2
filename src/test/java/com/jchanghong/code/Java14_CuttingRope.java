@@ -15,11 +15,17 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Java14_CuttingRope {
     //-1表示参数错误
     public int max(int n) {
         //0刀=n
         //1刀=max(i)*max(n-i)
+        if (n < 1) {
+            return -1;
+        }
         if (n == 2) {
             return 2;
         }
@@ -40,14 +46,30 @@ public class Java14_CuttingRope {
         return max;
     }
 
-    int max2(int... ints) {
-        int max = Integer.MIN_VALUE;
-        for (int anInt : ints) {
-            if (anInt > max) {
-                max = anInt;
-            }
+    int max2(int n) {
+        if (n < 1) {
+            return -1;
         }
-        return max;
+        //0刀=n
+        //1刀=max(i)*max(n-i)
+        List<Integer> list = new ArrayList<>();
+        list.add(0);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        for (int n1=5;n1<=n;n1++) {
+            int max = n1;
+            for (int i=1;i<n1>>2+1;i++) {
+                int max1 = list.get(n1 - i) * list.get(i);
+                if (max1 > max) {
+                    max = max1;
+                }
+            }
+            list.add(max);
+        }
+        return list.get(n);
+
     }
 
     @Test
@@ -55,6 +77,13 @@ public class Java14_CuttingRope {
         Assert.assertEquals(max(0), -1);
         Assert.assertEquals(max(-1), -1);
         Assert.assertEquals(max(8), 18);
+
+    }
+    @Test
+    public void test2() throws Exception {
+        Assert.assertEquals(max2(0), -1);
+        Assert.assertEquals(max2(-1), -1);
+        Assert.assertEquals(max2(8), 18);
 
     }
 }
