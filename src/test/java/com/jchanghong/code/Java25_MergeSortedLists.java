@@ -19,7 +19,22 @@ import org.junit.Test;
 public class Java25_MergeSortedLists {
 
     public LinkNode mergelist(LinkNode head1, LinkNode head2) {
-        return null;
+        if (head1 == null) {
+            return head2;
+        }
+        if (head2 == null) {
+            return head1;
+        }
+        LinkNode newhead = null;
+        if (head1.values < head2.values) {
+            newhead = head1;
+            newhead.next = mergelist(head1.next, head2);
+        }
+        else {
+            newhead = head2;
+            newhead.next = mergelist(head1, head2.next);
+        }
+        return newhead;
     }
 
     @Test
