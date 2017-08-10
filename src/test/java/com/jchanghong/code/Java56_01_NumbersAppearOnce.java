@@ -13,11 +13,27 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Java56_01_NumbersAppearOnce extends UtilAssert {
     List<Integer> two(int[] ints) {
-        return null;
+        List<Integer> list = new ArrayList<>();
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int anInt : ints) {
+
+            if (map.containsKey(anInt)) {
+                int v = map.get(anInt);
+                map.put(anInt, v + 1);
+            }
+            else {
+                map.put(anInt, 1);
+            }
+        }
+         map.entrySet().stream().filter(a -> a.getValue() == 1).forEach(a->list.add(a.getKey()));
+        return list;
     }
 
     @Test
