@@ -13,15 +13,35 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Java62_LastNumberInCircle {
 
     public int lastNumber(int[] ints,int m) {
+        Set<Integer> set = new HashSet<>();
+        int size = ints.length;
+        int nextremove = -1;
+        while (size > 1) {
+            int n = nextremove+1;
+            if (n == size) {
+                n = 0;
+            }
+            nextremove = next(size, m, n);
+            set.add(nextremove);
+            size--;
+        }
+        for (int i=0;i<ints.length;i++) {
+            if (!set.contains(i)) {
+                return ints[i];
+            }
+        }
         return -1;
     }
 
     int next(int size, int m, int start) {
         int next = start;
-        while (m > 0) {
+        while (m > 1) {
             next++;
             if (next == size) {
                 next = 0;
@@ -33,7 +53,7 @@ public class Java62_LastNumberInCircle {
 
     @Test
     public void testnext() throws Exception {
-        System.out.println(next(3, 1, 2));
+        System.out.println(next(3, 2, 2));
     }
 
     @Test
