@@ -13,9 +13,23 @@ import com.jchanghong.code.util.LinkNode;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Java52_FirstCommonNodesInLists extends UtilAssert {
     LinkNode parent(LinkNode f1, LinkNode f2) {
-        return f1;
+        Map<LinkNode, Boolean> map = new HashMap<>();
+        while (f1 != null) {
+            map.put(f1, true);
+            f1 = f1.next;
+        }
+        while (f2 != null) {
+            if (map.containsKey(f2)) {
+                return f2;
+            }
+            f2 = f2.next;
+        }
+        return null;
     }
 
     @Test
