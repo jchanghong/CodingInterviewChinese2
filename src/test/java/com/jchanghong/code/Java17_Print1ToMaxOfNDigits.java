@@ -13,14 +13,21 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Java17_Print1ToMaxOfNDigits {
     public List<String> from1ToN(int n) {
         List<String> list = new ArrayList<>();
-        list.add(1 + "");
-        list.add("1111111111111111111111111111111111111111111111");
+        BigInteger integer = BigInteger.valueOf(10);
+        integer = integer.pow(n);
+        BigInteger i = BigInteger.valueOf(1);
+        BigInteger one = BigInteger.valueOf(1);
+        BigInteger e = BigInteger.valueOf(0);
+        for (;i.compareTo(integer)<0;i=i.add(one)) {
+            list.add(i.toString());
+        }
         return list;
     }
 
