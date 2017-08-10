@@ -15,7 +15,37 @@ import org.junit.Test;
 
 public class Java48_LongestSubstringWithoutDup extends UtilAssert {
     String sub(String text) {
-        return text;
+        StringBuilder builder = new StringBuilder(text);
+        int max = -1;
+        String maxs = "";
+        for (int i=0;i<builder.length();i++) {
+            for (int j=i;j<builder.length();j++) {
+                String s = builder.subSequence(i, j + 1).toString();
+                if (good(s)) {
+                    if (s.length() > max) {
+                        max = s.length();
+                        maxs = s;
+                    }
+                }
+            }
+        }
+        return maxs;
+    }
+
+    boolean good(String text) {
+        int[] ints = new int[256];
+        for (int i=0;i<text.length();i++) {
+            if (ints[text.charAt(i)] > 0) {
+                return false;
+            }
+            ints[text.charAt(i)]++;
+        }
+        return true;
+    }
+
+    @Test
+    public void goodtest() throws Exception {
+        isTrue(good("abcdf"));
     }
 
     @Test
