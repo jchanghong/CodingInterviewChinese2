@@ -14,6 +14,25 @@ import java.util.*;
  */
 public class TreeUtil {
 
+    public static TreeNode clone(TreeNode head) {
+        if (head == null) {
+            return null;
+        }
+        else {
+            TreeNode node = new TreeNode(head.values, null, null);
+            node.left = clone(head.left);
+            node.right = clone(head.right);
+            return node;
+        }
+    }
+
+    @Test
+    public void testclone() throws Exception {
+        TreeNode node = construct2(1, 2, 3);
+        TreeNode node1 = clone(node);
+        Assert.assertTrue(valuesEqual(node1, node));
+    }
+
     public static boolean valuesEqual(TreeNode tree1, TreeNode tree2) {
         if (tree1 == null && tree2 == null) {
             return true;
