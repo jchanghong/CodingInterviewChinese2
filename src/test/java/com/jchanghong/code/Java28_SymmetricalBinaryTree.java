@@ -24,7 +24,8 @@ public class Java28_SymmetricalBinaryTree {
         Java27_MirrorOfBinaryTree tree = new Java27_MirrorOfBinaryTree();
         TreeNode h1 = tree.mirror(head);
         TreeUtil.print2(h1);
-        return TreeUtil.valuesEqual(head, h1);
+        boolean b = TreeUtil.valuesEqual(head, h1);
+        return b;
     }
 
     @Test
