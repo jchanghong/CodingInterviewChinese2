@@ -19,7 +19,28 @@ import java.util.Arrays;
 
 public class Java55_02_BalancedBinaryTree extends UtilAssert {
     public boolean binary(TreeNode head) {
-        return false;
+        if (head == null) {
+            return true;
+        }
+        if (head.left == null && head == null) {
+            return true;
+        }
+        int left = high(head.left);
+        int r = high(head.right);
+        return Math.abs(left - r) < 2;
+    }
+    public int high(TreeNode head) {
+        if (head == null) {
+            return 0;
+        }
+        if (head.left == null && head.right == null) {
+            return 1;
+        }
+        else {
+            int high = high(head.left);
+            int h2 = high(head.right);
+            return (h2 > high ? h2 : high) + 1;
+        }
     }
 
     @Test
