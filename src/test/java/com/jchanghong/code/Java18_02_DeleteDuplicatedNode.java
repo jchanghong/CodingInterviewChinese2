@@ -25,7 +25,7 @@ public class Java18_02_DeleteDuplicatedNode {
     public void test() throws Exception {
         LinkNode linkNode = LinkListUtil.construct(1, 2, 3, 4);
         Assert.assertTrue(LinkListUtil.equels(linkNode, removeDeplicated(linkNode)));
-        LinkNode linkNode2 = LinkListUtil.construct(1, 2, 3, 4, 2);
+        LinkNode linkNode2 = LinkListUtil.construct(1, 2, 2, 3, 4);
         Assert.assertTrue(LinkListUtil.equels(removeDeplicated(linkNode2), linkNode));
     }
 }
