@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class Java67_StringToInt {
     public int str2Int(String string) {
-        return 0;
+        return Integer.valueOf(string);
     }
 
     @Test
