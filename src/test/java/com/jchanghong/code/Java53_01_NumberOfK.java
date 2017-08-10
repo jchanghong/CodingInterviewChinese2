@@ -15,7 +15,48 @@ import org.junit.Test;
 
 public class Java53_01_NumberOfK extends UtilAssert {
     int number(int[] ints, int number) {
-        return 0;
+        int start = 0;
+        int end = ints.length - 1;
+        int s=-1;
+        int e = -1;
+        while (start < end) {
+            int m = (start + end) / 2;
+            if (ints[m] == number) {
+                if (ints[m - 1] < number) {
+                    s = m;
+                    break;
+                } else
+                {
+                    end = m;
+                }
+
+            } else if (ints[m] < number) {
+                start = m + 1;
+            }
+            else {
+                end = m - 1;
+            }
+        }
+         start = 0;
+         end = ints.length - 1;
+        while (start < end) {
+            int m = (start + end) / 2;
+            if (ints[m] == number) {
+                if (ints[m + 1] > number) {
+                    e = m;
+                    break;
+                }
+                else {
+                    start = m + 1;
+                }
+            } else if (ints[m] < number) {
+                start = m + 1;
+            }
+            else {
+                end = m - 1;
+            }
+        }
+        return e-s+1;
     }
 
     @Test
