@@ -14,13 +14,36 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import java.util.*;
 
 public class Java50_02_FirstCharacterInStream extends UtilAssert {
 
     char first(Reader reader, int readNumber) {
-        return 1;
+        LinkedHashMap<Character,Integer> set = new LinkedHashMap<>();
+        for (int i=0;i<readNumber;i++) {
+            try {
+                char c = (char) reader.read();
+                if (set.containsKey(c)) {
+                    int v = set.get(c);
+                    set.put(c, v + 1);
+                }
+                else {
+                    set.put(c, 1);
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        for (Map.Entry<Character, Integer> node : set.entrySet()) {
+            if (node.getValue() == 1) {
+                return node.getKey();
+            }
+        }
+        return 0;
     }
 
     @Test
