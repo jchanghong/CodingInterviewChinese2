@@ -20,7 +20,22 @@ import java.util.Set;
 public class Java57_02_ContinuousSquenceWithSum extends UtilAssert {
     public Set<Pair> function(int sum) {
         Set<Pair> pairs = new HashSet<>();
+        for (int i=1;i<sum;i++) {
+            for (int j=1;j<sum;j++) {
+                if (sum(i, j) == sum) {
+                    pairs.add(new Pair(i, j));
+                }
+            }
+        }
         return pairs;
+    }
+
+    int sum(int start,int end) {
+        int sum = 0;
+        for (int i = start; i <= end; i ++) {
+            sum += i;
+        }
+        return sum;
     }
 
     @Test
