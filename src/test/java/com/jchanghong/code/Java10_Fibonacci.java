@@ -12,19 +12,48 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 * 在数学上，费波那契数列是以递归的方法来定义：
 F_{0}=0
 F_{1}=1
 F_{n}=F_{{n-1}}+F_{{n-2}}（n≧2）*/
 public class Java10_Fibonacci {
+    //f(n)=f(n-1)+f(n-2)
     public int get(int n) {
-        return 0;
+        List<Integer> list = new ArrayList<>();
+        list.add(0);
+        list.add(1);
+        list.add(1);
+        list.add(2);
+        if (n <=4) {
+            return list.get(n-1);
+        }
+        for (int index = 4; index < n; index++) {
+            list.add(list.get(index - 2) + list.get(index - 1));
+        }
+        return list.get(n - 1);
+    }
+
+    @Test
+    public void time1() throws Exception {
+        for (int i = 1; i < 35; i++) {
+            get(i);
+        }
+    }
+
+    @Test
+    public void time2() throws Exception {
+        for (int i = 1; i < 35; i++) {
+            testfunction(i);
+        }
     }
 
     @Test
     public void test() throws Exception {
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < 35; i++) {
             Assert.assertEquals(get(i), testfunction(i));
         }
     }
