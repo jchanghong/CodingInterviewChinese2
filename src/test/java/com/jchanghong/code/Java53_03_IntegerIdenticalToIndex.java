@@ -20,6 +20,11 @@ import java.util.Set;
 public class Java53_03_IntegerIdenticalToIndex extends UtilAssert {
     public Set<Integer> numbers(int[] ints) {
         Set<Integer> number = new HashSet<>();
+        for (int i=0;i<ints.length;i++) {
+            if (i == ints[i]) {
+                number.add(i);
+            }
+        }
         return number;
     }
 
