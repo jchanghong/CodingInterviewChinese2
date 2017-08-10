@@ -16,7 +16,10 @@ import org.junit.Test;
 
 public class Java64_Accumulate {
     public int sum(int n) {
-        return -1;
+        if (n == 0) {
+            return 0;
+        }
+        return (1+n)*n/2;
     }
 
     @Test
