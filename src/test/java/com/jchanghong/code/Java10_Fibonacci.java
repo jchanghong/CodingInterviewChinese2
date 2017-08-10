@@ -9,6 +9,7 @@
  */
 package com.jchanghong.code;
 
+import com.jchanghong.code.util.InputException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -58,10 +59,13 @@ public class Java10_Fibonacci {
         }
     }
 
-    public int testfunction(int n) {
-        if (n == 0) {
+    public int testfunction(int n) throws InputException {
+        if (n < 1) {
+            throw new InputException("n<1");
+        }
+        if (n == 1) {
             return 0;
-        } else if (n == 1) {
+        } else if (n == 2) {
             return 1;
         } else {
             return testfunction(n - 2) + testfunction(n - 1);
