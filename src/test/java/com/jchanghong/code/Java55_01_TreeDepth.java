@@ -19,7 +19,17 @@ import java.util.Arrays;
 
 public class Java55_01_TreeDepth extends UtilAssert {
     public int treeDepth(TreeNode head) {
-        return -1;
+        if (head == null) {
+            return 0;
+        }
+        if (head.left == null && head.right == null) {
+            return 1;
+        }
+        else {
+            int treeDepth = treeDepth(head.left);
+            int h2 = treeDepth(head.right);
+            return (h2 > treeDepth ? h2 : treeDepth) + 1;
+        }
     }
 
     @Test
