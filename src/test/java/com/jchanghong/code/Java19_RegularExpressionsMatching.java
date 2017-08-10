@@ -15,10 +15,15 @@ package com.jchanghong.code;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Java19_RegularExpressionsMatching {
-    public boolean match(String reg, String text) {
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-        return false;
+public class Java19_RegularExpressionsMatching {
+    public boolean match(String text, String reg) {
+
+        Pattern pattern = Pattern.compile(reg);
+        Matcher matcher = pattern.matcher(text);
+        return matcher.matches();
     }
 
     @Test
