@@ -57,13 +57,18 @@ public class Java09_QueueWithTwoStacks {
         //需要实现-----------------------
         @Override
         public boolean offer(T t) {
-            return false;
+            return stack1.push(t)!=t;
         }
 
         //需要实现-----------------------
         @Override
         public T poll() {
-            return null;
+            if (stack2.empty()) {
+                while (!stack1.empty()) {
+                    stack2.push(stack1.pop());
+                }
+            }
+            return stack2.pop();
         }
 
         @Override
