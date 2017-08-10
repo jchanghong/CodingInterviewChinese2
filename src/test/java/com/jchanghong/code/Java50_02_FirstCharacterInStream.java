@@ -50,6 +50,7 @@ public class Java50_02_FirstCharacterInStream extends UtilAssert {
     public void test() throws Exception {
         Reader reader = new StringReader("google");
         eq(first(reader, 2), 'g');
+         reader = new StringReader("google");
         eq(first(reader, 6), 'l');
     }
 }
