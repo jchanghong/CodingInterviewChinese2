@@ -27,7 +27,7 @@ public class Java49_UglyNumber extends UtilAssert {
         eq(uglyNumber(4), 4);
         eq(uglyNumber(5), 5);
         eq(uglyNumber(6), 6);
-        eq(uglyNumber(7), 7);
-        eq(uglyNumber(8), 8);
+        eq(uglyNumber(7), 8);
+        eq(uglyNumber(8), 9);
     }
 }
