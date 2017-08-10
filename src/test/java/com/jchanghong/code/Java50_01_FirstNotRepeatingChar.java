@@ -16,8 +16,18 @@ import org.junit.Test;
 public class Java50_01_FirstNotRepeatingChar extends UtilAssert {
 
     char first(String text) {
-        return 'f';
+        int[] chars = new int[256];
+       for (int i=0;i<text.length();i++) {
+           chars[text.charAt(i)]++;
+       }
+        for (int i=0;i<text.length();i++) {
+            if (chars[text.charAt(i)] == 1) {
+                return text.charAt(i);
+            }
+        }
+        return 0;
     }
+
 
     @Test
     public void test() throws Exception {
