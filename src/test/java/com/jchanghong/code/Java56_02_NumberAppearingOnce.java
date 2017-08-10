@@ -13,10 +13,26 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 public class Java56_02_NumberAppearingOnce extends UtilAssert {
 
     public int once(int[] ints) {
-        return -1;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int anInt : ints) {
+
+            if (map.containsKey(anInt)) {
+                int v = map.get(anInt);
+                map.put(anInt, v + 1);
+            }
+            else {
+                map.put(anInt, 1);
+            }
+        }
+        return map.entrySet().stream().filter(a -> a.getValue() == 1).findAny().get().getKey();
     }
 
     @Test
