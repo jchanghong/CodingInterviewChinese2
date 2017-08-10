@@ -17,8 +17,26 @@ import static org.junit.Assert.assertEquals;
 
 public class Java04_FindInPartiallySortedMatrix {
 
+    //1 2 3
+    //4 5 6
+    //7 8 9
     public static boolean find(int[][] array, int number) {
-
+        int colmin=0;
+        int colmax = array[0].length;
+        int rowmin = 0;
+        int rowmax = array.length;
+        for (int row=rowmin;row<rowmax;row++) {
+            for (int c=colmax-1;c>=colmin;c--) {
+                if (array[row][c] == number) {
+                    return true;
+                } else if (array[row][c] > number) {
+                    colmax--;
+                }
+                else {
+                    rowmax--;
+                }
+            }
+        }
         return false;
     }
 

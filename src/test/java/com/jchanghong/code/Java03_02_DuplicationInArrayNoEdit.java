@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Java03_02_DuplicationInArrayNoEdit {
     public static int findduplication(int[] ints) {
-        return 0;
+        return Java03_01_DuplicationInArray.findDuplication(ints);
     }
 
     @Test

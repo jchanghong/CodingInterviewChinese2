@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 public class Java05_ReplaceSpaces {
 
     public static String replace(String text) {
-        return null;
+        return text.replace(" ", "%20");
     }
 
     @Test

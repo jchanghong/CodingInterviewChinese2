@@ -14,7 +14,12 @@ import org.junit.Test;
 
 public class Java06_PrintListInReversedOrder {
     public String print2String(Node head) {
-        return "";
+        if (head == null) {
+            return "";
+        }
+        else{
+            return print2String(head.next) + head.values;
+        }
     }
 
     @Test

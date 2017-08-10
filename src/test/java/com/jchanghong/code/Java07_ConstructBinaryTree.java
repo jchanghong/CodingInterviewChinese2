@@ -14,14 +14,33 @@ package com.jchanghong.code;
 
 import com.jchanghong.code.util.TreeNode;
 import com.jchanghong.code.util.TreeUtil;
+import com.sun.corba.se.spi.ior.EncapsulationFactoryBase;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.security.spec.EncodedKeySpec;
 import java.util.Arrays;
 import java.util.List;
 
 public class Java07_ConstructBinaryTree {
     public TreeNode construct(List<Integer> center, List<Integer> befor) {
+        return construct2(center, 0, center.size() - 1, befor, 0, befor.size() - 1);
+    }
+
+    public TreeNode construct2(List<Integer> center, int startc, int entc, List<Integer> befor, int startb, int endb) {
+        if (startb < 0 || startc < 0 || entc >= center.size() || endb >= center.size()) {
+            return null;
+        }
+        if (startb == endb) {
+            return new TreeNode(befor.get(startb), null, null);
+        }
+        if (startb <endb) {
+            TreeNode head = new TreeNode(befor.get(startb), null, null);
+            int indexhead = center.indexOf(befor.get(startb));
+            head.left = construct2(center, startc, indexhead - 1, befor, startb + 1, indexhead - startc + startb);
+            head.right = construct2(center, indexhead + 1, entc, befor, endb - (entc - 1 - indexhead), endb);
+            return head;
+        }
         return null;
     }
 
@@ -29,9 +48,12 @@ public class Java07_ConstructBinaryTree {
     public void test() throws Exception {
         List<Integer> center = Arrays.asList(2, 1, 3);
         List<Integer> befor = Arrays.asList(1, 2, 3);
-        TreeNode head = new TreeNode(2, null, null);
+        TreeNode head = new TreeNode(1, null, null);
         head.left = new TreeNode(2, null, null);
         head.right = new TreeNode(3, null, null);
-        Assert.assertEquals(TreeUtil.valuesEqual(construct(center, befor), head), true);
+        TreeNode construct = construct(center, befor);
+        TreeUtil.print2(construct);
+
+        Assert.assertEquals(TreeUtil.valuesEqual(construct, head), true);
     }
 }
