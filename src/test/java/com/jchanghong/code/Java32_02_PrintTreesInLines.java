@@ -15,12 +15,40 @@ import com.jchanghong.code.util.TreeUtil;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Java32_02_PrintTreesInLines extends UtilAssert {
     //一个元素代表一行，元素之间不加任何符号。
     List<String> print(TreeNode head) {
-        return null;
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<String> list = new ArrayList<>();
+        queue.offer(head);
+        int thisline = 1;
+        int nextLine = 0;
+        StringBuilder builder = new StringBuilder();
+        while (queue.peek() != null) {
+            TreeNode node = queue.poll();
+            builder.append(node.values);
+            thisline--;
+            if (node.left != null) {
+                queue.offer(node.left);
+                nextLine++;
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+                nextLine++;
+            }
+            if (thisline == 0) {
+                list.add(builder.toString());
+                builder = new StringBuilder();
+                thisline = nextLine;
+                nextLine = 0;
+            }
+        }
+        return list;
     }
 
     @Test
