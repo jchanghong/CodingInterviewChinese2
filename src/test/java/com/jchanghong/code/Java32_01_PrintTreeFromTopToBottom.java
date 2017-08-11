@@ -14,10 +14,29 @@ import com.jchanghong.code.util.TreeUtil;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Java32_01_PrintTreeFromTopToBottom extends UtilAssert {
     //元素之间没有任何其他符号。比如1,2 打印就是“12”
     String print(TreeNode node) {
-        return "";
+        if (node == null) {
+            return "";
+        }
+        StringBuilder builder = new StringBuilder();
+        Queue<TreeNode> integers = new LinkedList<>();
+        integers.offer(node);
+        while (integers.peek() != null) {
+            TreeNode i = integers.poll();
+            builder.append(i.values);
+            if (i.left != null) {
+                integers.offer(i.left);
+            }
+            if (i.right != null) {
+                integers.offer(i.right);
+            }
+        }
+        return builder.toString();
     }
 
     @Test
