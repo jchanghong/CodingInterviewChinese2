@@ -16,12 +16,63 @@ import com.jchanghong.code.util.TreeUtil;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-import java.util.List;
+import java.util.*;
 
 public class Java32_03_PrintTreesInZigzag extends UtilAssert {
     //一个元素代表一行，元素之间不加任何符号。
     List<String> print(TreeNode head) {
-        return null;
+        Deque<TreeNode> queue = new LinkedList<>();
+        Deque<TreeNode> quenext = new LinkedList<>();
+        List<String> list = new ArrayList<>();
+        queue.addFirst(head);
+        int thisline = 1;
+        int nextLine = 0;
+        boolean o = true;
+        StringBuilder builder = new StringBuilder();
+        while (queue.peekFirst() != null) {
+            TreeNode node = queue.pollFirst();
+            builder.append(node.values);
+            thisline--;
+            if (o) {
+                if (node.left != null) {
+                    quenext.offerFirst(node.left);
+                    nextLine++;
+                }
+                if (node.right != null) {
+                    quenext.offerFirst(node.right);
+                    nextLine++;
+                }
+            }
+            else {
+                if (node.right != null) {
+                    quenext.offerFirst(node.right);
+                    nextLine++;
+                }
+                if (node.left != null) {
+                    quenext.offerFirst(node.left);
+                    nextLine++;
+                }
+
+            }
+
+            if (thisline == 0) {
+                list.add(builder.toString());
+                builder = new StringBuilder();
+                thisline = nextLine;
+                if (o) {
+                    o = false;
+
+                }
+                else {
+                    o = true;
+                }
+                nextLine = 0;
+                Deque<TreeNode> tremp = quenext;
+                quenext = queue;
+                queue = tremp;
+            }
+        }
+        return list;
     }
 
     @Test
