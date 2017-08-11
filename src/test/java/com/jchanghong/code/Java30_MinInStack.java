@@ -13,6 +13,10 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Stack;
+
 public class Java30_MinInStack extends UtilAssert {
 
     @Test
@@ -30,15 +34,28 @@ public class Java30_MinInStack extends UtilAssert {
 
     //实现下面3个函数
     static class MyStack {
+        Deque<Integer> deque = new LinkedList<>();
+        Deque<Integer> dequemin = new LinkedList<>();
         public void push(int i) {
+            deque.addFirst(i);
+            Integer pop = dequemin.peekFirst();
+
+            if (pop==null||i < pop) {
+                dequemin.addFirst(i);
+            }
+            else {
+                dequemin.addFirst(pop);
+            }
         }
 
         public int pop() {
-            return 0;
+            dequemin.pollFirst();
+            return deque.pollFirst();
+
         }
 
         public int min() {
-            return -1;
+            return dequemin.peekFirst();
         }
 
     }
