@@ -14,9 +14,24 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Java35_CopyComplexList extends UtilAssert {
     Node copy(Node head) {
-        return null;
+        Map<Node, Node> old2new = new HashMap<>();
+        return copy2(head, old2new);
+    }
+    Node copy2(Node head,Map<Node,Node> map) {
+        if (head != null) {
+        Node    head2 = new Node(head.v, null, null);
+            head2.left = copy2(head.left, map);
+            head2.other = copy2(head.other, map);
+            return head2;
+        }
+        else {
+            return null;
+        }
     }
 
     @Test
