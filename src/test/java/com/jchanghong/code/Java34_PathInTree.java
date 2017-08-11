@@ -15,6 +15,9 @@ import com.jchanghong.code.util.TreeUtil;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Java34_PathInTree extends UtilAssert {
@@ -25,8 +28,58 @@ public class Java34_PathInTree extends UtilAssert {
       2            3
     * */
     List<String> path(TreeNode head, int sum) {
-        return null;
+        List<Integer> list = new ArrayList<>();
+        List<String> result = new ArrayList<>();
+        path2(head, list, 0,result,sum);
+        return result;
     }
+
+
+    //root =0
+    void path2(TreeNode head, List<Integer> list, int high,List<String> result,int sum) {
+        if (head != null) {
+            list.add(head.values);
+        }
+        if (head.left == null&&head.right==null) {
+            if (sum(list) == sum) {
+                result.add(tostrings(list));
+            }
+        }
+        if (head.left != null) {
+            path2(head.left, list, high + 1,result,sum);
+        }
+        if (head.right != null) {
+            path2(head.right, list, high + 1,result,sum);
+        }
+        list.remove(high);
+    }
+    @Test
+    public void testpath() throws Exception {
+        StringBuilder builder = new StringBuilder(1000);
+        builder.insert(0, 'd');
+        builder.insert(builder.length(), 'g');
+        System.out.println(builder.toString());
+        List<Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+    }
+
+    String tostrings(List<Integer> integers) {
+        StringBuilder builder = new StringBuilder();
+        for (Integer integer : integers) {
+            builder.append(integer);
+        }
+        return builder.toString();
+    }
+    int sum(List<Integer> list) {
+        int sum = 0;
+        for (Integer integer : list) {
+            sum += integer;
+        }
+        return sum;
+    }
+
+
 
     @Test
     public void test() throws Exception {
