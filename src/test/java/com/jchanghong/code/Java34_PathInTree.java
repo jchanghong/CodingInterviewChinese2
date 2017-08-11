@@ -88,7 +88,7 @@ public class Java34_PathInTree extends UtilAssert {
         List<String> list = path(head, 22);
         eq(list.size(), 2);
         isTrue(list.contains("1012"));
-        isTrue(list.contains(1057));
+        isTrue(list.contains("1057"));
 
     }
 }
