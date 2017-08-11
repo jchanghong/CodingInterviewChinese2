@@ -23,7 +23,7 @@ public class Java30_MinInStack extends UtilAssert {
         eq(myStack.pop(), 1);
         myStack.push(2);
         myStack.push(3);
-        eq(myStack.min(), 3);
+        eq(myStack.min(), 2);
         myStack.pop();
         eq(myStack.min(), 2);
     }
