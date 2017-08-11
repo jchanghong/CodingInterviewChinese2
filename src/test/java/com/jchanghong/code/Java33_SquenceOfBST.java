@@ -13,9 +13,56 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import javax.lang.model.type.IntersectionType;
+import java.util.Arrays;
+
 public class Java33_SquenceOfBST extends UtilAssert {
+    //左右中
     boolean aftersort(int[] ints) {
-        return false;
+        return aftersort(ints, 0, ints.length - 1);
+    }
+
+    boolean aftersort(int[] ints, int start, int end) {
+        if (start > end) {
+            return false;
+        }
+        if (start == end) {
+            return true;
+        }
+        if (end - start == 1) {
+            return true;
+        }
+        int head = ints[end];
+        int small = 0;
+        for (int i=start;i<end+1;i++) {
+            if (ints[i] < head) {
+                small++;
+            }
+        }
+        if (!good(ints, start + small, head,start,end)) {
+            return false;
+        }
+        if (small == 0) {
+            return aftersort(ints, start, end - 1);
+        }
+        else {
+            return aftersort(ints, start, start + small-1) && aftersort(ints, start + small, end-1);
+        }
+    }
+
+    //m之前的都比head小，其他的之后的都比head大
+    boolean good(int[] ints, int m,int head,int s,int e) {
+        for (int i=s;i<m&&i<=e;i++) {
+            if (ints[i] > head) {
+                return false;
+            }
+        }
+        for (int i=m;i<=e;i++) {
+            if (ints[i] < head) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Test
