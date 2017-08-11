@@ -15,9 +15,29 @@ package com.jchanghong.code;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
+import java.util.*;
+
 public class Java31_StackPushPopOrder extends UtilAssert {
     boolean popOrder(int[] push, int[] pop) {
-        return false;
+        Deque<Integer> deque = new LinkedList<>();
+        int pushindex = 0;
+        int popindex = 0;
+        while (popindex < pop.length) {
+            int popa = pop[popindex];
+            popindex++;
+            for (int i=pushindex;i<push.length;i++) {
+                deque.addFirst(push[i]);
+                if (push[i] == popa) {
+                    pushindex = i+1;
+                    break;
+                }
+            }
+            Integer poped = deque.pollFirst();
+            if (poped == null || poped != popa) {
+                return false;
+            }
+        }
+        return pushindex == popindex;
     }
 
     @Test
