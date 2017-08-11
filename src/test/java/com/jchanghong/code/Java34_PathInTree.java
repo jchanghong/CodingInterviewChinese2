@@ -15,10 +15,7 @@ import com.jchanghong.code.util.TreeUtil;
 import com.jchanghong.code.util.UtilAssert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Java34_PathInTree extends UtilAssert {
     /*
@@ -28,7 +25,7 @@ public class Java34_PathInTree extends UtilAssert {
       2            3
     * */
     List<String> path(TreeNode head, int sum) {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new LinkedList<>();
         List<String> result = new ArrayList<>();
         path2(head, list, 0,result,sum);
         return result;
