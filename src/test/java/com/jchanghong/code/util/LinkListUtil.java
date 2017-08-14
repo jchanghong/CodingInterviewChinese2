@@ -10,7 +10,7 @@ import java.util.Objects;
  * \* User: jiang
  * \* Date: 2017/8/5 0005
  * \* Time: 18:06
- * \
+ * \链表工具
  */
 public class LinkListUtil {
     public static LinkNode construct(int... ints) {

@@ -5,7 +5,7 @@ package com.jchanghong.code.util;
  * \* User: jiang
  * \* Date: 2017/8/9 0009
  * \* Time: 18:16
- * \
+ * \junit工具类
  */
 public class UtilAssert {
     protected void eq(Object object, Object object2) {

@@ -14,13 +14,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class Java62_LastNumberInCircle {
-    public int lastNumber(int[] ints,int m) {
+    public int lastNumber(int[] ints, int m) {
         return -1;
     }
 
     @Test
     public void test() throws Exception {
         int[] ints = {0, 1, 2, 3, 4};
-        Assert.assertEquals(lastNumber(ints,3), 3);
+        Assert.assertEquals(lastNumber(ints, 3), 3);
     }
 }

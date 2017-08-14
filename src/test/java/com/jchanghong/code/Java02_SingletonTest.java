@@ -6,8 +6,8 @@ package com.jchanghong.code;
 public class Java02_SingletonTest {
     private static final Java02_SingletonTest SINGLETON = new Java02_SingletonTest();
 
-    //test
-    public Java02_SingletonTest() {
+    //不要public
+    private Java02_SingletonTest() {
     }
 
     public static Java02_SingletonTest getSingleton() {
@@ -15,7 +15,7 @@ public class Java02_SingletonTest {
                 SINGLETON;
     }
 
-
+    //也可以用这个方法
     enum Sington {
         SINGTON
     }

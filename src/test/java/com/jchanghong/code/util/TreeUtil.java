@@ -17,20 +17,12 @@ public class TreeUtil {
     public static TreeNode clone(TreeNode head) {
         if (head == null) {
             return null;
-        }
-        else {
+        } else {
             TreeNode node = new TreeNode(head.values, null, null);
             node.left = clone(head.left);
             node.right = clone(head.right);
             return node;
         }
-    }
-
-    @Test
-    public void testclone() throws Exception {
-        TreeNode node = construct2(1, 2, 3);
-        TreeNode node1 = clone(node);
-        Assert.assertTrue(valuesEqual(node1, node));
     }
 
     public static boolean valuesEqual(TreeNode tree1, TreeNode tree2) {
@@ -42,18 +34,9 @@ public class TreeUtil {
         }
         if (tree1.values.equals(tree2.values)) {
             return valuesEqual(tree1.left, tree2.left) && valuesEqual(tree1.right, tree2.right);
-        } else  {
+        } else {
             return false;
         }
-    }
-
-    @Test
-    public void testEQ() throws Exception {
-        TreeNode node1 = construct2(1, 2, 3);
-        TreeNode node2 = construct2(1, 2, 3);
-        Assert.assertTrue(valuesEqual(node1,node2));
-        node2 = construct2(2, 1, 3);
-        Assert.assertFalse(valuesEqual(node1, node2));
     }
 
     /**
@@ -183,6 +166,22 @@ public class TreeUtil {
 
         }
         strings.forEach(a -> System.out.println(a.toString()));
+    }
+
+    @Test
+    public void testclone() throws Exception {
+        TreeNode node = construct2(1, 2, 3);
+        TreeNode node1 = clone(node);
+        Assert.assertTrue(valuesEqual(node1, node));
+    }
+
+    @Test
+    public void testEQ() throws Exception {
+        TreeNode node1 = construct2(1, 2, 3);
+        TreeNode node2 = construct2(1, 2, 3);
+        Assert.assertTrue(valuesEqual(node1, node2));
+        node2 = construct2(2, 1, 3);
+        Assert.assertFalse(valuesEqual(node1, node2));
     }
 
     @Test
