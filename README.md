@@ -20,6 +20,8 @@ master分支是我们写好测试代码，让其他人学习的人去完成答�
 要更新测试用例：
 * 先chekout master分支，更新测试。
 * chekout src分支，合并master分支中的test代码。
+
+
 要更新src分支:
 * 直接chekout src分支，然后更新代码就行
 src作为参考答案
